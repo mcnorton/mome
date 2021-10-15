@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    transition: all 1s ease;
+    margin: 0;
 }
 
 
@@ -17,6 +17,9 @@ body {
 
 .left {
     width: 50%;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
     display: block;
     float: left;
 }
@@ -24,6 +27,7 @@ body {
 .right {
     width: 50%;
     height: 100vh;
+    margin: 0;
     display: block;
     float: right;
     overflow: scroll;
@@ -118,10 +122,10 @@ body {
 
 
 .quote {
-    margin: 0 auto;
     width: 50%;
+    margin: 0px auto;
     position: fixed;
-    padding: 2vw;
+    padding: none;
     text-align: center;
     bottom: 2vh;
 }
