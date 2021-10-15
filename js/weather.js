@@ -1,4 +1,4 @@
-const KEY_API = "ba1eb3825f7383677f2803e3d8533312";
+const KEY_API = "-------";
 const KEY_LOCA = "myloca";
 
 const button = document.querySelector("#weather button");
