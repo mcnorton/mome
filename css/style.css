@@ -125,6 +125,7 @@ body {
     width: 50%;
     margin: 0px auto;
     position: fixed;
+    overflow: hidden;
     padding: none;
     text-align: center;
     bottom: 2vh;
