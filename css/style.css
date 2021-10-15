@@ -1,0 +1,178 @@
+body {
+    color: white;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    transition: all 1s ease;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+.left {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    height: 100vh;
+    display: block;
+    float: right;
+    overflow: scroll;
+}
+
+
+
+
+.weather {
+    font-size: 1.2vw;
+    line-height: 1em;
+}
+
+.weather button {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+
+
+
+.clock {
+    text-align: center;
+    font-size: 10vw;
+    line-height: normal;
+    margin-bottom: -1vh;
+}
+
+.second {
+    font-size: 5vw;
+    padding: 0 1vw 0 1vw;
+    opacity: 40%;
+}
+
+
+
+
+
+.greeting {
+    text-align: center;
+    line-height: 0em;
+}
+
+.greeting h3 {
+    font-size: 3vw;
+}
+
+.greeting h4 {
+    font-size: 2.5vw;
+    opacity: 50%;
+}
+
+.greeting button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+
+.login-form {
+    text-align: center;
+}
+
+.login-form input {
+    outline: none;
+    color: white;
+}
+
+.login-name {
+    margin: 0 auto;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    font-size: 2vw;
+    background-color: transparent;
+}
+
+.login-name::placeholder {
+    color: silver;
+}
+
+.login-submit {
+    border: none;
+    font-size: 2vw;
+    padding: 10px;
+    background-color: transparent;
+}
+
+
+
+
+
+.quote {
+    margin: 0 auto;
+    width: 50%;
+    position: fixed;
+    padding: 2vw;
+    text-align: center;
+    bottom: 2vh;
+}
+
+.quote p {
+    font-size: 1.5vw;
+    line-height: 1em;
+}
+
+.quote span {
+    font-size: 1vw;
+}
+
+
+
+
+
+.todo-input {
+    margin: 0 auto;
+    width: 49%;
+    position: fixed;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    font-size: 2vw;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.todo-input::placeholder {
+    color: silver;
+}
+
+.todo-list {
+    margin-top: 10vh;
+}
+
+.todo-list li {
+    font-size: 2vw;
+    border-bottom: 1px solid white;
+    padding: 2.5vh 2vw 1vh 2vw;
+    list-style: none;
+    text-indent: -2vw;
+}
+
+.todo-list button {
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 2vw;
+    width: 2vw;
+    height: 2vw;
+    margin-right: 1vw;
+}

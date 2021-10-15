@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Mome</title>
+    </head>
+    <body>
+        <div class="left">
+            <div id="weather" class="weather">
+                <span></span>
+                <br />
+                <span></span>
+                <button>?</button>
+            </div>
+ 
+            <h1 id="clock" class="clock"><span>00:00</span><span class="second">00</span></h1>
+
+            <form id="login-form" class="login-form hidden">
+            <input required maxlength=15 class="login-name" type="text" placeholder="What is your name?">
+            <input type="submit" class="login-submit" value="+">
+            </form>
+
+            <div id="greeting" class="greeting hidden">
+                <h4></h4>
+                <h3></h3>
+                <button>x</button>
+            </div>
+
+            <div id="quote" class="quote">
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <form id="todo-form" class="todo-form">
+                    <input type="text" class="todo-input" placeholder="Today" required>
+                </form>
+            </div>
+            <div class="todo">
+                <ul id="todo-list" class="todo-list"></ul>
+            </div>
+        </div>
+        <script src="js/greeting.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+</html>
