@@ -30,7 +30,7 @@ body {
     margin: 0;
     display: block;
     float: right;
-    overflow: scroll;
+    overflow: auto;
 }
 
 
