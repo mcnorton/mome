@@ -4,6 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
         <title>Mome</title>
     </head>
     <body>
@@ -28,7 +31,7 @@
             <div id="greeting" class="greeting hidden">
                 <h4></h4>
                 <h3></h3>
-                <button>o</button>
+                <button><ion-icon name="refresh-circle-outline"></ion-icon></button>
             </div>
 
             <div id="quote" class="quote">
@@ -39,13 +42,15 @@
         <div class="right">
             <div>
                 <form id="todo-form" class="todo-form">
-                    <input type="text" class="todo-input" placeholder="Today" required>
+                    <input type="text" class="todo-input" placeholder="Memo..." required>
                 </form>
             </div>
             <div class="todo">
                 <ul id="todo-list" class="todo-list"></ul>
             </div>
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="js/greeting.js"></script>
         <script src="js/clock.js"></script>
         <script src="js/quotes.js"></script>

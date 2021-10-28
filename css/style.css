@@ -1,4 +1,5 @@
 body {
+    font-family: 'Gugi', cursive;
     color: white;
     overflow: hidden;
     background-size: cover;
@@ -70,11 +71,12 @@ body {
 
 .greeting {
     text-align: center;
-    line-height: 0em;
+    line-height: 1em;
 }
 
 .greeting h3 {
     font-size: 3vw;
+    margin: none;
 }
 
 .greeting h4 {
@@ -83,8 +85,10 @@ body {
 }
 
 .greeting button {
+    font-size: 2vw;
     background-color: transparent;
     color: white;
+    opacity: 30%;
     border: none;
 }
 
