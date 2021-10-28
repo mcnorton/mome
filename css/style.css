@@ -1,5 +1,9 @@
-body {
+* {
     font-family: 'Gugi', cursive;
+
+}
+
+body {
     color: white;
     overflow: hidden;
     background-size: cover;
