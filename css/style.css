@@ -72,11 +72,12 @@ body {
 .greeting {
     text-align: center;
     line-height: 1em;
+    display: inline-block;
+    width: 100%;
 }
 
 .greeting h3 {
     font-size: 3vw;
-    margin: none;
 }
 
 .greeting h4 {
