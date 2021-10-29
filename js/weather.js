@@ -1,4 +1,13 @@
-const KEY_API = "-------";
+/*  HTML
+    <div id="weather" class="weather">
+        <span></span>
+        <br />
+        <span></span>
+        <button>?</button>
+    </div>
+*/
+
+const KEY_API = "";
 const KEY_LOCA = "myloca";
 
 const button = document.querySelector("#weather button");
