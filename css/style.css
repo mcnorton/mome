@@ -1,6 +1,5 @@
 * {
-    font-family: 'Gugi', cursive;
-
+    font-family: 'Jua', sans-serif;
 }
 
 body {
@@ -10,7 +9,6 @@ body {
     background-position: center center;
     margin: 0;
 }
-
 
 .hidden {
     display: none;

@@ -3,10 +3,12 @@ const loginInput = document.querySelector("#login-form input");
 const logout = document.querySelector("#greeting button");
 
 const greeting = document.querySelector("#greeting");
+// const greeting = document.getElementById("greeting");
 const sayhello = document.querySelector("#greeting h4");
 const sayname = document.querySelector("#greeting h3");
 
 const HIDDEN_CLASSNAME = "hidden";
+const GREETING_CLASSNAME = "greeting";
 const KEY_USERNAME = "username";
 
 function onLoginSubmit(event) {
@@ -20,6 +22,7 @@ function onLoginSubmit(event) {
 function onLogoutSubmit(event) {
     event.preventDefault();
     localStorage.removeItem(KEY_USERNAME);
+    greeting.classList.remove(GREETING_CLASSNAME);
     greeting.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
 }
@@ -38,6 +41,7 @@ function printGreeting(username) {
 
     sayhello.innerText = say;
     sayname.innerText = username;
+    greeting.classList.add(GREETING_CLASSNAME)
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
