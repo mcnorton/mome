@@ -16,3 +16,5 @@
 * 교실 전자칠판/스크린에 간편 알림장 띄우기
 * 일정관리
 
+## Thanks!
+* 노마드코더 Vanilla JS Course - https://nomadcoders.co/
