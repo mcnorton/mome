@@ -9,8 +9,8 @@
 
 const KEY_API = "";
 const KEY_LOCA = "myloca";
-
 const button = document.querySelector("#weather button");
+
 button.addEventListener ("click", refreshGeo);
 
 let memLoca = localStorage.getItem(KEY_LOCA);

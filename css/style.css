@@ -10,6 +10,11 @@ body {
     margin: 0;
 }
 
+.slowhide {
+    opacity: 0;
+    transition: 1s all;
+}
+
 .hidden {
     display: none;
 }

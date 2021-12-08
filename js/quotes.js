@@ -1,3 +1,5 @@
+const quote = document.querySelector("#quote p:first-child");
+const author = document.querySelector("#quote span:last-child");
 const quotes = [
     {
         quote: "인생에서 저지를 수 있는 가장 큰 실수는, 실수를 끊임없이 두려워하는 일이다",
@@ -32,12 +34,7 @@ const quotes = [
         author: "하버트 개서",
     },
 ];
-
-const quote = document.querySelector("#quote p:first-child");
-const author = document.querySelector("#quote span:last-child");
-
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = `'${todaysQuote.quote}'`;
 author.innerText = todaysQuote.author;
-

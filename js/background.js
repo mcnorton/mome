@@ -2,7 +2,6 @@ const images = [
     "note.jpg",
     "forestroad.jpg",
     "deskclock.jpg",
-    "orange.jpg",
     "laptop.jpg",
     "typewriter.jpg",
     "workspace.jpg",
