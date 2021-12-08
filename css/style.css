@@ -58,7 +58,7 @@ body {
     font-size: 10vw;
     line-height: normal;
     margin-left: 12vw;
-    margin-top: 15vh;
+    margin-top: -3vh;
     margin-bottom: -1vh;
 }
 
@@ -68,7 +68,11 @@ body {
     opacity: 40%;
 }
 
-
+.calen {
+    margin-top: 15vh;
+    font-size: 1.5vw;
+    text-align: center;
+}
 
 
 
@@ -183,7 +187,7 @@ body {
 
 .todo-list button {
     background-color: transparent;
-    border: 1px solid white;
+    border: 3px solid white;
     font-size: 2vw;
     width: 2vw;
     height: 2vw;
