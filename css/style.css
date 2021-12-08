@@ -72,6 +72,7 @@ body {
     margin-top: 15vh;
     font-size: 1.5vw;
     text-align: center;
+    opacity: 50%;
 }
 
 
@@ -187,7 +188,7 @@ body {
 
 .todo-list button {
     background-color: transparent;
-    border: 3px solid white;
+    border: 4px solid white;
     font-size: 2vw;
     width: 2vw;
     height: 2vw;
