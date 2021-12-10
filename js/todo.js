@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 const KEY_TODOS = "todos";
+const SLOWHIDE_CLASSNAME = "slowhide";
 let toDos = [];
 
 const savedToDos = localStorage.getItem(KEY_TODOS);
@@ -38,7 +39,7 @@ function printToDo(newTodo) {
     span.innerText = newTodo.text;
 
     const button = document.createElement("button");
-    button.innerText = "";
+    button.innerText = " ";
     button.addEventListener("click", deleteToDo);
 
     li.appendChild(button);
@@ -48,7 +49,11 @@ function printToDo(newTodo) {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
-    li.remove();
+    const button = event.target;
+
+    button.innerText = "✓";
+    li.classList.add(SLOWHIDE_CLASSNAME);
+    setTimeout(function() { li.remove(); }, 30000);
 
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
