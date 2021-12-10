@@ -2,6 +2,9 @@
 * 크롬 확장앱 "모멘텀"을 클론으로 만들었습니다.
 * Chrome Extention "Momentum" Clone.
 
+![screen_memo_hd](https://user-images.githubusercontent.com/4551495/145520765-96e5085f-88bc-4c2b-bd85-5e37fa8d4402.png)
+
+
 ## Chrome Browser 새탭에서 보기 설정 ([New Tab] Chrome Browser)
 ### 1. Install 'New Tab Redirect'
 * 크롬 > 설정 > 도구 더보기 > 확장프로그램 > 'New Tab Redirect' 설치
