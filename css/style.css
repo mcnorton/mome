@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic+Coding:wght@700&display=swap');
+
+
 * {
-    font-family: 'Jua', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 body {
     color: white;
     overflow: hidden;
+    margin: 0;
     background-size: cover;
     background-position: center center;
-    margin: 0;
+    background-attachment: fixed;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 .slowhide {
     opacity: 0;
@@ -25,21 +35,17 @@ body {
 
 
 .left {
-    width: 50%;
-    height: 100vh;
+    text-align: center;
     margin: 0;
-    position: fixed;
     display: block;
     float: left;
+    position: relative;
 }
 
 .right {
-    width: 50%;
-    height: 100vh;
     margin: 0;
     display: block;
-    float: right;
-    overflow: auto;
+    overflow: hidden;
 }
 
 
@@ -59,23 +65,12 @@ body {
 
 
 
-.clock {
-    text-align: left;
-    font-size: 10vw;
-    line-height: normal;
-    margin-left: 12vw;
-    margin-top: -3vh;
-    margin-bottom: -1vh;
-}
-
-.second {
-    font-size: 5vw;
-    padding: 0 1vw 0 1vw;
-    opacity: 40%;
-}
-
 .calen {
-    margin-top: 15vh;
+    margin-top: 5vw;
+    margin-bottom: -1vw;
+}
+
+.calen_text {
     font-size: 1.5vw;
     text-align: center;
     opacity: 50%;
@@ -83,9 +78,35 @@ body {
 
 
 
+
+.clock {
+    text-align: center;
+    height: auto;
+    padding-bottom: -150px;
+    font-size: 0;
+    margin-bottom: -3vh;
+    line-height: 0;
+}
+
+.hourmin {
+    font-family: 'Nanum Gothic Coding', monospace;
+    text-align: center;
+    font-size: 12vw;
+}
+
+.second {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 5vw;
+    padding: 0 1vw;
+    opacity: 40%;
+}
+
+
+
+
 .greeting {
     text-align: center;
-    line-height: 1em;
+    line-height: 0;
     display: inline-block;
     width: 100%;
 }
@@ -105,6 +126,7 @@ body {
     color: white;
     opacity: 30%;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -142,18 +164,17 @@ body {
 
 
 .quote {
-    width: 50%;
-    margin: 0px auto;
-    position: fixed;
+    position: absolute;
+    width: 100%;
     overflow: hidden;
     padding: none;
     text-align: center;
-    bottom: 2vh;
+    bottom: 2vw;
 }
 
 .quote p {
     font-size: 1.5vw;
-    line-height: 1em;
+    line-height: 10%;
 }
 
 .quote span {
@@ -163,10 +184,21 @@ body {
 
 
 
+
+.todo-top{
+    width: 100%;
+    display: inline-block;
+}
+
+.todo {
+    width: 100%;
+    height: 90%;
+    display: inline-block;
+    overflow: auto;
+}
+
 .todo-input {
-    margin: 0 auto;
-    width: 49%;
-    position: fixed;
+    width: 100%;
     border: none;
     border-bottom: 2px solid white;
     padding: 10px;
@@ -178,10 +210,6 @@ body {
 
 .todo-input::placeholder {
     color: silver;
-}
-
-.todo-list {
-    margin-top: 10vh;
 }
 
 .todo-list li {
@@ -203,4 +231,33 @@ body {
     margin-bottom: 0.5vw;
     cursor: pointer;
     vertical-align: text-top;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .left { width: 100%; height: 30vh; }
+    .right { width: 100%; height: 70vh; position: fixed; top: 30vh; }
+    .todo-list button { height: 3vw; width: 3vw; }
+    .todo-list li { font-size: 3vw; }
+    .todo-input { font-size: 3vw; }
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) {
+    body { background-size: auto 100%; }
+    .left { width: 100%; height: 40vh; }
+    .right { width: 100%; height: 60vh; position: fixed; top: 40vh; }
+    .todo-list button { height: 3vw; width: 3vw; }
+    .todo-list li { font-size: 3vw; }
+    .todo-input { font-size: 3vw; }
+}
+
+@media screen and (min-width: 800px) {
+    body { background-size: cover; }
+    .left { width: 50%; height: 100vh; }
+    .right { width: 50%; height: 100vh; }
+    .todo-list button { height: 2vw; width: 2vw; }
+    .todo-list li { font-size: 2vw; }
+    .todo-input { font-size: 2vw; }
 }
