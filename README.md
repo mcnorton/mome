@@ -7,6 +7,8 @@
 
 ![screen_memo_hd](https://user-images.githubusercontent.com/4551495/145520765-96e5085f-88bc-4c2b-bd85-5e37fa8d4402.png)
 
+
+
 ## 특징
 * 웹폰트를 적용하여 보기에 좋습니다.
 * Vanilla Javascript, HTML, CSS 로만 제작하였습니다.
@@ -21,10 +23,19 @@
 * 사무실 일정안내 대쉬보드 등
 
 ## 개선
-* (2022.01.26.) 반응형 웹, Fixed Font
+* 2022.01.26. 반응형 웹 적용, Fixed Font로 변경
+
+## 예정
+* README 도움말 연결 버튼
+* 시계 위치 조정
+* 배경화면 종류 추가
 
 
-## 새 탭에서 모메 자동으로 열기
+
+
+---
+
+## (응용) 새 탭에서 여는 방법
 새 탭을 열 때, Mome 페이지를 자동으로 열리도록 하면 엄청나게 편리함.
 
 ![CustomNewTabURL](https://lh3.googleusercontent.com/4lCsO0HhSqwN-U68QDFgVhLWb285-pfcoX_PHV5C6J6WuLSadROAD5iQm8kKmE8xM0qmh6XUQ0Wf0NtxFLkyB7t2=w640-h400-e365-rj-sc0x00ffffff)
