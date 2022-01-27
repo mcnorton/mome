@@ -80,24 +80,22 @@ body {
 
 
 .clock {
-    text-align: center;
+    text-align: left;
     height: auto;
-    padding-bottom: -150px;
     font-size: 0;
-    margin-bottom: -3vh;
-    line-height: 0;
 }
 
 .hourmin {
-    font-family: 'Nanum Gothic Coding', monospace;
-    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 1vw;
     font-size: 12vw;
 }
 
 .second {
-    font-family: 'Nanum Gothic Coding', monospace;
-    font-size: 5vw;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 6vw;
     padding: 0 1vw;
+    letter-spacing: 0px;
     opacity: 40%;
 }
 
@@ -239,6 +237,7 @@ body {
 @media screen and (max-width: 640px) {
     .left { width: 100%; height: 30vh; }
     .right { width: 100%; height: 70vh; position: fixed; top: 30vh; }
+    .hourmin { margin-left: 30%; }
     .todo-list button { height: 3vw; width: 3vw; }
     .todo-list li { font-size: 3vw; }
     .todo-input { font-size: 3vw; }
@@ -248,6 +247,7 @@ body {
     body { background-size: auto 100%; }
     .left { width: 100%; height: 40vh; }
     .right { width: 100%; height: 60vh; position: fixed; top: 40vh; }
+    .hourmin { margin-left: 30%; }
     .todo-list button { height: 3vw; width: 3vw; }
     .todo-list li { font-size: 3vw; }
     .todo-input { font-size: 3vw; }
@@ -257,6 +257,7 @@ body {
     body { background-size: cover; }
     .left { width: 50%; height: 100vh; }
     .right { width: 50%; height: 100vh; }
+    .hourmin { margin-left: 20%; }
     .todo-list button { height: 2vw; width: 2vw; }
     .todo-list li { font-size: 2vw; }
     .todo-input { font-size: 2vw; }
