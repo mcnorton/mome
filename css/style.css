@@ -79,20 +79,16 @@ body {
 
 .clock {
     text-align: left;
-    height: auto;
-    font-size: 0;
 }
 
 .hourmin {
     letter-spacing: 1vw;
-    font-size: 12vw;
+    font-size: 11vw;
 }
 
 .second {
     font-size: 6vw;
-    padding: 0 1vw;
-    letter-spacing: 0px;
-    opacity: 40%;
+    opacity: 30%;
 }
 
 
