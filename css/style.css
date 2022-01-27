@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic+Coding:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 * {
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Jua', sans-serif;
 }
 
 body {
@@ -86,13 +84,11 @@ body {
 }
 
 .hourmin {
-    font-family: 'Do Hyeon', sans-serif;
     letter-spacing: 1vw;
     font-size: 12vw;
 }
 
 .second {
-    font-family: 'Do Hyeon', sans-serif;
     font-size: 6vw;
     padding: 0 1vw;
     letter-spacing: 0px;
