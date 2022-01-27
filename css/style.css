@@ -249,7 +249,7 @@ body {
     body { background-size: cover; }
     .left { width: 50%; height: 100vh; }
     .right { width: 50%; height: 100vh; }
-    .hourmin { margin-left: 20%; }
+    .hourmin { margin-left: 15%; }
     .todo-list button { height: 2vw; width: 2vw; }
     .todo-list li { font-size: 2vw; }
     .todo-input { font-size: 2vw; }
