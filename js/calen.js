@@ -10,7 +10,6 @@ function printDate() {
     let week = weekday[date.getDay()];
 
     calen.innerText = `${year}. ${month}. ${today}. ${week}`;
-    secnd.innerText = seconds;
 }
 
 printDate();
