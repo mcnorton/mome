@@ -48,6 +48,23 @@ body {
 
 
 
+.info {
+    text-align: left;
+}
+
+.info button{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin: 1vw;
+    cursor: pointer;
+    opacity: 30%;
+}
+
+
 
 .weather {
     font-size: 1.2vw;
@@ -79,6 +96,7 @@ body {
 
 .clock {
     text-align: left;
+    margin-bottom: -3vh;
 }
 
 .hourmin {
