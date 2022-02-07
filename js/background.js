@@ -1,9 +1,11 @@
 const images = [
-    "note.jpg",
-    "forestroad.jpg",
-    "laptop.jpg",
-    "typewriter.jpg",
-    "workspace.jpg",
+    "art.jpg",
+    "business.jpg",
+    "clip.jpg",
+    "coffee.jpg",
+    "desk.jpg",
+    "journey.jpg",
+    "paint.jpg",
 ];
 
 const backgroundImage = images[Math.floor(Math.random()*images.length)];
