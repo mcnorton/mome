@@ -81,12 +81,12 @@ body {
 
 
 .calen {
-    margin-top: 5vw;
+    margin-top: 3vw;
     margin-bottom: -1vw;
 }
 
-.calen_text {
-    font-size: 1.5vw;
+.calen h3 {
+    font-size: 2vw;
     text-align: center;
     opacity: 50%;
 }
@@ -95,6 +95,7 @@ body {
 
 
 .clock {
+    padding: 0;
     text-align: left;
     margin-bottom: -3vh;
 }
