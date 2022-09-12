@@ -1,4 +1,4 @@
-# 브라우저 메모장, 모메 (mome)
+# 웹브라우저 할일관리, 모메 (mome)
 
 실행 : https://mcnorton.github.io/mome/
 
@@ -56,6 +56,8 @@
 
 ![CONFIG](https://user-images.githubusercontent.com/4551495/148336958-b271b12e-b4c3-413c-aa4f-3ea80d6efc9b.png)
 
+
+---
 
 ## Special Thanks!
 * 노마드코더 Vanilla JS Course - https://nomadcoders.co/
