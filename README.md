@@ -1,6 +1,9 @@
 # 웹브라우저 할일관리, 모메 (mome)
 
-실행 : https://mcnorton.github.io/mome/
+## 실행 URL
+***https://mcnorton.github.io/mome/***
+
+---
 
 * 웹브라우저의 홈페이지나 새 탭 기본페이지로 지정하여 시간/날짜/메모/할일관리 등을 할 수 있는 페이지
 * 구글 크롬브라우저의 유명한 모멘텀의 클론 (Google Chrome Extention "Momentum" Clone)
@@ -31,8 +34,8 @@
 ## 예정
 * README 도움말 연결 버튼 (완료)
 * 시계 위치 조정 (완료)
-* 배경화면 종류 추가 (완료)
-
+* 배경화면 추가 (완료)
+* Theme 선택 기능 
 
 
 
