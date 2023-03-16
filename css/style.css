@@ -69,14 +69,13 @@ body {
 
 
 .bglist {
-    text-align: center;
     margin-bottom: 3vh;
 }
 
 .bglist button {
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
-    font-size: 1vw;
     color: white;
     background-color: transparent;
     cursor: pointer;
@@ -84,8 +83,17 @@ body {
     border: 0;
 }
 
-.bg-rnd {
-    font-size: 1vw !important;
+.bglist span {
+    pointer-events: none;
+}
+
+.bgButton {
+    font-size: 1vw;
+
+}
+
+.bgShuffle {
+    font-size: 1.5vw !important;
     opacity: 100% !important;
 }
 
