@@ -3,7 +3,6 @@ const loginInput = document.querySelector("#login-form input");
 const logout = document.querySelector("#greeting button");
 
 const greeting = document.querySelector("#greeting");
-// const greeting = document.getElementById("greeting");
 const sayhello = document.querySelector("#greeting h4");
 const sayname = document.querySelector("#greeting h3");
 
