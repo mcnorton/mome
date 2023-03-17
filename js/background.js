@@ -1,7 +1,7 @@
 const images = [
     "",
+    "spring.jpg",
     "business.jpg",
-    "clip.jpg",
     "desk.jpg",
     "board.jpg",
     "sky.jpg",
