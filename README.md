@@ -66,4 +66,5 @@
 ---
 
 ## Special Thanks!
-* 노마드코더 Vanilla JS Course - https://nomadcoders.co/
+* Nomardcoder (Vanilla JS Course) - https://nomadcoders.co/
+* Pixabay - https://pixabay.com/
