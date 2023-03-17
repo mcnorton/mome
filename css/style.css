@@ -270,6 +270,7 @@ body {
 .todo-list button {
     background-color: transparent;
     border: 0.2vw solid white;
+    border-radius: 0.5vw;
     font-size: 1vw;
     color: white;
     width: 2vw;
