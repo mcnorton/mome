@@ -50,8 +50,13 @@ function printToDo(newTodo) {
 function deleteToDo(event) {
     const li = event.target.parentElement;
     const button = event.target;
+    const span = document.createElement("span");
+    const ionicon = document.createElement("ion-icon");
 
-    button.innerText = "✓";
+    // 텍스트 체크마크 button.innerText = "✓";
+    ionicon.setAttribute("name", "checkmark-sharp");
+    span.appendChild(ionicon);
+    button.appendChild(span);
     li.classList.add(SLOWHIDE_CLASSNAME);
     setTimeout(function() { li.remove(); }, 30000);
 
