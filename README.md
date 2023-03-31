@@ -39,7 +39,16 @@
 * README 도움말 아이콘 (완료)
 * 시계 위치 조정 (완료)
 * 배경화면 추가 (완료)
-* 배경선택 기능 (진행중)
+* 배경선택 기능 (완료)
+
+## What's new...
+* 2023.03.31 체크마크 디자인을 개선
+>  * 개선
+>    <img width="254" alt="스크린샷 2023-03-31 오후 2 30 41" src="https://user-images.githubusercontent.com/4551495/229031847-20ed04cc-0534-4e49-8d33-a7b8db89d1de.png">
+>  * 기존
+>    <img width="272" alt="스크린샷 2023-03-31 오후 2 29 05" src="https://user-images.githubusercontent.com/4551495/229031873-815bc8eb-20a6-49d4-b406-107e5a325c3d.png">
+
+
 
 ---
  ## 2021-2022 
