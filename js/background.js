@@ -16,6 +16,14 @@ const KEY_BGNAME = "background";
 let savedBGname = localStorage.getItem(KEY_BGNAME);
 let bgImage;
 
+// 배경 목록이 변경되어, 저장된 값보다 줄어들면 초기화합니다.
+// 배경수가 늘어났다면 변동이 있더라도 그냥 둡니다. 
+// 원치 않는 배경이미지가 보여게 되며, 무작위로 새로운 배경이미지를 소개할 수 있습니다.
+if (Math.floor(savedBGname) > images.length-1) {
+    savedBGname = "";
+    removeBG();
+}
+
 // 이미 저장된 배경화면이 있으면, 우선 보여줍니다.
 if (savedBGname === null || savedBGname == "") {
     bgImage = images[Math.floor(Math.random()*(images.length-1)+1)];
