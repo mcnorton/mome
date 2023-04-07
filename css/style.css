@@ -265,6 +265,7 @@ body {
     padding: 2.5vh 2vw 1vh 2vw;
     list-style: none;
     text-indent: -2vw;
+    text-decoration-color: red;
 }
 
 .todo-list button {
