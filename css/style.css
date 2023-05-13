@@ -18,6 +18,7 @@ body {
 }
 
 
+
 .slowhide {
     opacity: 0;
     transition: 40s all;
@@ -27,8 +28,6 @@ body {
 .hidden {
     display: none;
 }
-
-
 
 
 
@@ -66,8 +65,6 @@ body {
 
 
 
-
-
 .bglist {
     margin-bottom: 3vh;
 }
@@ -81,6 +78,7 @@ body {
     cursor: pointer;
     opacity: 30%;
     border: 0;
+    outline: none;
 }
 
 .bglist span {
@@ -112,7 +110,6 @@ body {
 
 
 
-
 .calen {
     text-align: center;
 }
@@ -124,7 +121,6 @@ body {
     opacity: 50%;
     margin: 0;
 }
-
 
 
 
@@ -147,7 +143,6 @@ body {
     opacity: 30%;
     margin: 0;
 }
-
 
 
 
@@ -208,8 +203,6 @@ body {
 
 
 
-
-
 .quote {
     position: absolute;
     width: 100%;
@@ -227,8 +220,6 @@ body {
 .quote span {
     font-size: 1vw;
 }
-
-
 
 
 
@@ -288,6 +279,29 @@ body {
     position: absolute;
     transform: translate(-40%, -50%);
 }
+
+
+
+.screen {
+    padding: 5px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+.screen button {
+    color: white;
+    font-size: 2.5vw;
+    line-height: 0%;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+    opacity: 30%;
+    cursor: pointer;
+    outline: none;
+}
+
 
 
 @media screen and (max-width: 480px) {

@@ -16,6 +16,7 @@ if (savedToDos !== null) {
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 
+
 function handleToDoSubmit(event) {
     event.preventDefault();
 
@@ -30,6 +31,8 @@ function handleToDoSubmit(event) {
     printToDo(newTodoObj);
     saveToDos();
 }
+
+
 
 function printToDo(newTodo) {
     const li = document.createElement("li");
@@ -47,6 +50,8 @@ function printToDo(newTodo) {
     toDoList.appendChild(li);
 }
 
+
+
 function deleteToDo(event) {
     const li = event.target.parentElement;
     const button = event.target;
@@ -63,6 +68,8 @@ function deleteToDo(event) {
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
 }
+
+
 
 function saveToDos(){
     localStorage.setItem(KEY_TODOS, JSON.stringify(toDos));
