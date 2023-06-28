@@ -63,7 +63,7 @@
 
 # 도움말 (필수)
 
-## 새 탭에서 Mome 자동으로 열기
+## Google Chrome 새 탭에서 Mome 자동으로 열기
 새 탭을 열 때, Mome 페이지를 자동으로 열리도록 하면 엄청나게 편리합니다.
 
 ![CustomNewTabURL](https://lh3.googleusercontent.com/4lCsO0HhSqwN-U68QDFgVhLWb285-pfcoX_PHV5C6J6WuLSadROAD5iQm8kKmE8xM0qmh6XUQ0Wf0NtxFLkyB7t2=w640-h400-e365-rj-sc0x00ffffff)

@@ -48,6 +48,10 @@
                 <button><ion-icon name="refresh-circle-outline"></ion-icon></button>
             </div>
 
+            <div id="toolbelt" class="toolbelt">
+                <div><button id="timer-open"><ion-icon name="hourglass-outline"></ion-icon></button></div>
+            </div>
+
             <div id="quote" class="quote">
                 <p></p>
                 <span></span>
@@ -71,6 +75,47 @@
             </div>
         </div>
 
+        <!-- Timer : Modal Layer -->
+        <div id="timer-modal" class="timer-modal">
+            <div class="timer-body">
+              <div class="timer-close">
+                <button id="timer-close-button">
+                  <span><ion-icon name="close-circle-outline"></ion-icon></span>
+                </button>
+              </div>
+              <div class="timer">
+                <div id="timer-circle" class="timer-circle">
+                  <div id="timer-time" class="timer-time"><span></span></div>
+                </div>
+              </div>
+              <div id="timer-control" class="timer-control">
+                <button id="timer-reset" class="timer-reset">
+                  <ion-icon name="refresh"></ion-icon>
+                </button>
+                <button id="timer-5min-plus">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+                <button id="timer-1min-plus">
+                  <ion-icon name="add"></ion-icon>
+                </button>
+                <button id="timer-pause" class="timer-pause">
+                  <ion-icon name="play"></ion-icon>
+                </button>
+                <button id="timer-1min-minus">
+                  <ion-icon name="remove"></ion-icon>
+                </button>
+                <button id="timer-5min-minus">
+                  <ion-icon name="remove-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div id="timer-timeup-dialog" class="timer-timeup-dialog">
+                <button><ion-icon name="notifications"></ion-icon></button>
+                <audio id="timesup-sound"></audio>
+              </div>
+            </div>
+          </div>
+
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="js/info.js"></script>
@@ -81,6 +126,7 @@
         <script src="js/background.js"></script>
         <script src="js/todo.js"></script>
         <script src="js/fullscreen.js"></script>
+        <script src="js/timer.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6S6HSJQCCK"></script>
