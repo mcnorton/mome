@@ -304,44 +304,13 @@ body {
 
 
 
-@media screen and (max-width: 480px) {
-    .left { width: 100%; height: 40vh; }
-    .right { width: 100%; height: 50vh; position: fixed; top: 40vh; }
-    .hourmin { margin-left: 30%; }
-    .todo-list button { height: 3vw; width: 3vw; }
-    .todo-list li { font-size: 3vw; }
-    .todo-input { font-size: 3vw; }
-}
-
-@media screen and (min-width: 480px) and (max-width: 800px) {
-    body { background-size: auto 100%; }
-    .left { width: 100%; height: 50vh; }
-    .right { width: 100%; height: 50vh; position: fixed; top: 50vh; }
-    .hourmin { margin-left: 30%; }
-    .todo-list button { height: 3vw; width: 3vw; }
-    .todo-list li { font-size: 3vw; }
-    .todo-input { font-size: 3vw; }
-}
-
-@media screen and (min-width: 800px) {
-    body { background-size: cover; }
-    .left { width: 50%; height: 100vh; }
-    .right { width: 50%; height: 100vh; }
-    .hourmin { margin-left: 15%; }
-    .todo-list button { height: 2vw; width: 2vw; }
-    .todo-list li { font-size: 2vw; }
-    .todo-input { font-size: 2vw; }
-}
-
-
-
 .toolbelt {
     position: absolute;
     width: 100%;
     overflow: hidden;
     padding: 3vh 0;
     text-align: center;
-    bottom: 14vh;
+    bottom: 100px;
 }
 
 .toolbelt div {
@@ -349,12 +318,12 @@ body {
 }
 
 .toolbelt button {
-    height: 7vh;
-    width: 7vh;
+    height: 4vw;
+    width: 4vw;
     border: 1px solid silver;
     border-radius: 50%;
     background-color: transparent;
-    font-size: 3vh;
+    font-size: 2vw;
     color: white;
     cursor: pointer;
     line-height: 80%;
@@ -385,10 +354,12 @@ body {
     align-items: center;
     background-color: white;
     border-radius: 30px;
-    margin: 5vh auto;
+    margin: 2vw auto;
     padding: 20px;
     border: 1px solid black;
-    width: 80vw;
+    width: 60vw;
+    height: 40vw;
+    box-shadow: 7px 7px 20px 5px gray;
 }
 
 .timer-close {
@@ -403,7 +374,7 @@ body {
     color: black;
     border: 0;
     background-color: transparent;
-    font-size: 7vh;
+    font-size: 4vw;
     font-weight: bold;
     cursor: pointer;
 }
@@ -415,16 +386,16 @@ body {
 
 .timer {
     position: relative;
-    width: 80vw;
-    height: 80vh;
+    width: 60vw;
+    height: 40vw;
     margin: 0 auto;
     border-radius: 20px;
 }
 
 .timer-circle {
     position: relative;
-    width: 80vh;
-    height: 80vh;
+    width: 40vw;
+    height: 40vw;
     margin: 0 auto;
     border-radius: 50%;
     background-color: red;
@@ -436,12 +407,12 @@ body {
     background-color: white;
     top: 50%;
     left: 50%;
-    width: 20vh;
-    height: 20vh;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     text-align: center;
-    line-height: 21vh;
-    font-size: 5vh;
+    line-height: 10vw;
+    font-size: 2.5vw;
     transform: translate(-50%, -50%);
     color: black;
 }
@@ -457,12 +428,12 @@ body {
 .timer-control button {
     display: block;
     border-radius: 50%;
-    height: 8vh;
-    width: 8vh;
+    height: 4vw;
+    width: 4vw;
     color: black;
     border: 1px solid #d4d4d4;
     background-color: transparent;
-    font-size: 3vh;
+    font-size: 2vw;
     pointer-events: auto;
     cursor: pointer;
     margin: 2px 0px;
@@ -526,4 +497,36 @@ body {
     30% {
         opacity: 20%;
     }
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    .left { width: 100%; height: 40vh; }
+    .right { width: 100%; height: 50vh; position: fixed; top: 40vh; }
+    .hourmin { margin-left: 30%; }
+    .todo-list button { height: 3vw; width: 3vw; }
+    .todo-list li { font-size: 3vw; }
+    .todo-input { font-size: 3vw; }
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    body { background-size: auto 100%; }
+    .left { width: 100%; height: 50vh; }
+    .right { width: 100%; height: 50vh; position: fixed; top: 50vh; }
+    .hourmin { margin-left: 30%; }
+    .todo-list button { height: 3vw; width: 3vw; }
+    .todo-list li { font-size: 3vw; }
+    .todo-input { font-size: 3vw; }
+}
+
+@media screen and (min-width: 800px) {
+    body { background-size: cover; }
+    .left { width: 50%; height: 100vh; }
+    .right { width: 50%; height: 100vh; }
+    .hourmin { margin-left: 15%; }
+    .todo-list button { height: 2vw; width: 2vw; }
+    .todo-list li { font-size: 2vw; }
+    .todo-input { font-size: 2vw; }
 }

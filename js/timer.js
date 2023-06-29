@@ -163,8 +163,15 @@ function drawTimer() {
     timerDisplay.innerHTML = secToTime(CntSec);
 
     // background: conic-gradient(red 70%, white 30%);
+    
+    /* AntiClockwise
     percent = (CntSec / (SetMtime * 60 * 10) * 100);
-    timerGraph.style.background = `conic-gradient(red ${percent}%, white ${percent}%)`;
+    timerGraph.style.background = `conic-gradient(red ${percent}%, white ${percent}%)`; 
+    */
+
+    // Clockwise
+    percent = 100 - (CntSec / (SetMtime * 60 * 10) * 100);
+    timerGraph.style.background = `conic-gradient(white ${percent}%, red ${percent}%)`;
 
     if (CntSec <= 0) { 
       clearInterval(IntvID);
