@@ -176,7 +176,7 @@ function drawTimer() {
 
 function secToTime(s) {
   s = Math.floor(s * 0.1);
-  let mm = String(Math.floor((s % (60 * 99)) / 60)).padStart(2,"0");
+  let mm = String(Math.floor((s % (60 * 100)) / 60)).padStart(2,"0");
   const ss = String(Math.floor(s % 60)).padStart(2,"0");
   return `${mm}:${ss}`;
 }
