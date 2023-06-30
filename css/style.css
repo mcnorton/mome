@@ -320,7 +320,7 @@ body {
 .toolbelt button {
     height: 4vw;
     width: 4vw;
-    border: 1px solid silver;
+    border: 2px solid white;
     border-radius: 50%;
     background-color: transparent;
     font-size: 2vw;
@@ -431,13 +431,18 @@ body {
     height: 4vw;
     width: 4vw;
     color: black;
-    border: 1px solid #d4d4d4;
+    border: none;
     background-color: transparent;
-    font-size: 2vw;
+    font-size: 1.5vw;
     pointer-events: auto;
     cursor: pointer;
-    margin: 2px 0px;
     line-height: 80%;
+    text-align: center;
+    padding: 0;
+}
+
+.timer-control button:hover {
+    border: 1px solid silver;
 }
 
 .timer-reset > ion-icon ,
