@@ -462,8 +462,8 @@ body {
     display: flex;
     justify-content: center;
     position: fixed;
-    width: 20vh;
-    height: 20vh;
+    width: 20vw;
+    height: 20vw;
     align-items: center;
     text-align: center;
     border-radius: 30px;
@@ -489,14 +489,11 @@ body {
     padding: 20px;
     border: 0;
     border-radius: 20px;
-    font-size: 7vh;
+    font-size: 8vw;
+    line-height: 80%;
     cursor: pointer;
 }
 
-.timer-timeup-dialog button ion-icon {
-    font-size: 5vh;
-    line-height: 100%;
-}
 
 @keyframes blink-blink {
     30% {
