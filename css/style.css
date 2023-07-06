@@ -310,7 +310,7 @@ body {
     overflow: hidden;
     padding: 3vh 0;
     text-align: center;
-    bottom: 100px;
+    bottom: 5vw;
 }
 
 .toolbelt div {
@@ -320,7 +320,7 @@ body {
 .toolbelt button {
     height: 4vw;
     width: 4vw;
-    border: 2px solid white;
+    border: 0px solid white;
     border-radius: 50%;
     background-color: transparent;
     font-size: 2vw;
@@ -511,6 +511,7 @@ body {
     .todo-list button { height: 3vw; width: 3vw; }
     .todo-list li { font-size: 3vw; }
     .todo-input { font-size: 3vw; }
+    .toolbelt button { font-size: 5vw; }
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
@@ -521,6 +522,7 @@ body {
     .todo-list button { height: 3vw; width: 3vw; }
     .todo-list li { font-size: 3vw; }
     .todo-input { font-size: 3vw; }
+    .toolbelt button { font-size: 4vw; }
 }
 
 @media screen and (min-width: 800px) {
@@ -531,4 +533,5 @@ body {
     .todo-list button { height: 2vw; width: 2vw; }
     .todo-list li { font-size: 2vw; }
     .todo-input { font-size: 2vw; }
+    .toolbelt button { font-size: 2vw; }
 }

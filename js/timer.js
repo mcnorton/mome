@@ -37,8 +37,9 @@ document.getElementById("timer-5min-minus").addEventListener("click", onClickTim
 document.getElementById("timer-pause").addEventListener("click", onClickTimerPause);
 document.getElementById("timer-reset").addEventListener("click", onClickTimerReset);
 
-timesupSound.src = "snd/cuckoo12.mp3";
-wTimer();
+// timesupSound.src = "snd/cuckoo12.mp3";
+timesupSound.src = "snd/birds.mp3";
+drawTimer();
 
 function timesupSoundOff() {
   timesupSound.pause();
