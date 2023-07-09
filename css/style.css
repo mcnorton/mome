@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+/* 주아체 구글 폰트 */
+/* @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap'); */
+
+/* 고운돋움 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 * {
-    font-family: 'Jua', sans-serif;
+    /* 주아체 */
+    /* font-family: 'Jua', sans-serif; */
+
+    /* 고운돋움 */
+    font-family: 'Gowun Dodum', sans-serif;
 }
+
 
 body {
     color: white;
@@ -215,6 +224,7 @@ body {
 .quote p {
     font-size: 1.5vw;
     line-height: 10%;
+    letter-spacing: -2px;
 }
 
 .quote span {
