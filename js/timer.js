@@ -6,19 +6,19 @@ const timesupPopup = document.getElementById("timer-timeup-dialog");
 const timesupSound = document.getElementById("timesup-sound");
 
 const PerSec = 0.1; // 1 = 1sec, 0.1 = 1/10 sec
-const OneSec = 1000;
-const GraphFps = OneSec * PerSec;
-const KEY_TIMER = "timer";
+const OneSec = 1000; // 1sec
+const GraphFps = OneSec * PerSec; // Framerate 10fps (1/10sec) : smooth
+const KEY_TIMER = "timer"; // Localstorage label
 
 let savedTime = Math.floor(localStorage.getItem(KEY_TIMER));
 
 if (savedTime === null || savedTime <= 0) {
-  savedTime = 10; // 기본값을 10분으로 설정
+  savedTime = 10; // 기본값을 10분으로 초기화
   localStorage.setItem(KEY_TIMER, savedTime);
 }
 
 if (savedTime >= 99) {
-  savedTime = 99; // 저장된 값이 99분을 넘는다면, 99분으로 고정 (예방차원에서)
+  savedTime = 99; // 저장된 값이 99분을 넘는다면, 99분으로 초기화 (예방차원)
   localStorage.setItem(KEY_TIMER, savedTime);
 }
 
@@ -37,7 +37,10 @@ document.getElementById("timer-5min-minus").addEventListener("click", onClickTim
 document.getElementById("timer-pause").addEventListener("click", onClickTimerPause);
 document.getElementById("timer-reset").addEventListener("click", onClickTimerReset);
 
+// 12시를 알리는 뻐꾸기 시계 Pixabay Free Sound
 // timesupSound.src = "snd/cuckoo12.mp3";
+
+// 2307변경. 숲속 새소리 Pixabay Free Sound
 timesupSound.src = "snd/birds.mp3";
 drawTimer();
 
@@ -104,7 +107,7 @@ function onClickTimerCtrlP1() {
   const t = 1;
   const n = NowSec--;
 
-  if (SetMtime < (100 - t)) { // 60분이 넘지 않을 때
+  if (SetMtime < (100 - t)) { // 99분까지 시간 추가 
     SetMtime = Math.floor(SetMtime) + Math.floor(t);
   }
   setLocalTimer(SetMtime);
@@ -117,7 +120,7 @@ function onClickTimerCtrlM1() {
   const t = 1;
   const n = NowSec--;
 
-  if (SetMtime > (t)) { // 2분 보다 클 때
+  if (SetMtime > (t)) { // 남은 시간이 1분 보다 클 때만 시간을 줄임
     SetMtime = SetMtime - Math.floor(t);
   }
   setLocalTimer(SetMtime);
