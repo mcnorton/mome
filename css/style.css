@@ -267,6 +267,7 @@ body {
     list-style: none;
     text-indent: -2vw;
     text-decoration-color: red;
+    font-weight: bold;
 }
 
 .todo-list button {
