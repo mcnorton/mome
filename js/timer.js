@@ -175,7 +175,7 @@ function drawTimer() {
 
     // Clockwise
     percent = 100 - (CntSec / (SetMtime * 60 * 10) * 100);
-    timerGraph.style.background = `conic-gradient(white ${percent}%, red ${percent}%)`;
+    timerGraph.style.background = `conic-gradient(white ${percent}%, #bb0000 ${percent}%)`;
 
     if (CntSec <= 0) { 
       clearInterval(IntvID);
@@ -204,7 +204,7 @@ function setLocalTimer(s) {
 
 function openTimesUp() {
   timesupSoundOn();
-  timerGraph.style.background = "conic-gradient(red 100%, white 100%)";
+  timerGraph.style.background = "conic-gradient(#fefefe 100%, white 100%)";
   timerDisplay.innerHTML = secToTime(SetMtime * 60 * 10);
   timesupPopup.style.visibility = "visible";
 }

@@ -262,12 +262,12 @@ body {
 
 .todo-list li {
     font-size: 2vw;
+    font-weight: bold;
     border-bottom: 1px solid #909090;
     padding: 2.5vh 2vw 1vh 2vw;
     list-style: none;
     text-indent: -2vw;
     text-decoration-color: red;
-    font-weight: bold;
 }
 
 .todo-list button {
@@ -409,8 +409,8 @@ body {
     height: 40vw;
     margin: 0 auto;
     border-radius: 50%;
-    background-color: red;
-    background: conic-gradient(red 70%, white 30%);
+    background-color: #bb0000;
+    background: conic-gradient(#bb0000 70%, white 30%);
 }
 
 .timer-time {
