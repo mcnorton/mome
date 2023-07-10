@@ -204,7 +204,7 @@ function setLocalTimer(s) {
 
 function openTimesUp() {
   timesupSoundOn();
-  timerGraph.style.background = "conic-gradient(#fefefe 100%, white 100%)";
+  timerGraph.style.background = "conic-gradient(#eeeeee 100%, white 100%)";
   timerDisplay.innerHTML = secToTime(SetMtime * 60 * 10);
   timesupPopup.style.visibility = "visible";
 }
