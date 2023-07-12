@@ -42,7 +42,7 @@ function onLogoutSubmit(event) {
 function printGreeting(username) {
     const date = new Date();
     const hour = Number(date.getHours());
-    let say = "Good afternoon";
+    let say = "Good Afternoon";
 
     if ( hour < 12 ) {
         say = "Good Morning";
