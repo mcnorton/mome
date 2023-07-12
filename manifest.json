@@ -24,8 +24,8 @@
     }],
   "start_url": "/mome/",
   "scope": "/mome/",
-  "display": "fullscreen",
-  "theme_color": "#4a6572",
-  "background_color": "#4a6572",
+  "display": "standalone",
+  "theme_color": "#44546a",
+  "background_color": "#44546a",
   "orientation": "any"
 }
