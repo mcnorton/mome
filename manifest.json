@@ -22,7 +22,7 @@
       "sizes": "256x256",
       "type": "image/png"
     }],
-  "start_url": "/",
+  "start_url": "/mome",
   "display": "fullscreen",
   "theme_color": "#4a6572",
   "background_color": "#4a6572",
