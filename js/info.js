@@ -1,4 +1,4 @@
-const info = document.querySelector("#info button");
+const info = document.getElementById("readme");
 
 info.addEventListener("click", onClickInfo);
 

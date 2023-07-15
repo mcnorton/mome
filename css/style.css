@@ -27,6 +27,7 @@ body {
 }
 
 
+/* Slowhide, Hide Effect */
 
 .slowhide {
     opacity: 0;
@@ -39,6 +40,7 @@ body {
 }
 
 
+/* Half Line */
 
 .left {
     text-align: center;
@@ -55,24 +57,43 @@ body {
 }
 
 
+/* Information */
 
 .info {
     text-align: left;
 }
 
-.info button{
+.info button {
+    opacity: 30%;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5vw;
+    vertical-align: middle;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.readme{    
+    margin-right: 0px;
+    line-height: 0%;
+    font-size: 2vw;
     color: white;
     background-color: transparent;
     border: none;
-    margin: 1vw;
-    cursor: pointer;
-    opacity: 30%;
+}
+
+.install {
+    margin-left: 0px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px 15px;
+    background-color: #000000;
+    color: white;
+    font-size: 1vw;
 }
 
 
+/* Background Wallpaper */
 
 .bglist {
     margin-bottom: 3vh;
