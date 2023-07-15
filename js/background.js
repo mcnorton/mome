@@ -1,12 +1,14 @@
 const images = [
     "",
     "spring.jpg",
+    "rose.jpg",
+    "ocean.jpg",
     "business.jpg",
-    "desk.jpg",
     "board.jpg",
     "sky.jpg",
     "rain.jpg",
     "field.jpg",
+    "seoul.jpg"
 ];
 
 const bglist = document.getElementById("bglist");
