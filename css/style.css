@@ -541,7 +541,7 @@ body {
     border-radius: 50%;
     opacity: 80%;
     cursor: pointer;
-    background-image: url("../img/_clockface.svg");
+    background-image: url("/img/_clockface.svg");
     background-repeat: no-repeat;
     background-position: center left;
     background-size: cover;
