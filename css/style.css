@@ -160,6 +160,7 @@ body {
     text-align: left;
     margin-top: 2vh;
     cursor: pointer;
+    user-select: none;
 }
 
 .hourmin {
