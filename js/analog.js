@@ -10,6 +10,7 @@ let anaclockID = null;
 digitalclock.addEventListener("click", openAnalogClock);
 analogclock.addEventListener("click", openDigitalClock);
 
+analogClockFace();
 openDigitalClock();
 
 function analogClockDraw() {
@@ -31,6 +32,9 @@ function analogClockDraw() {
 
 
 function analogClockFace() {
+    /* 시계 배경을 무작위로 바꿀 수 있도록? */
+    analogclock.style.backgroundImage = `url('img/_clockface.svg')`;
+
     /* const cface = anface.cloneNode(true);
     for (i = 0; i < 12; i ++) {
         let dotface = analogclock.appendChild(cface);
