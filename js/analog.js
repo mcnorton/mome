@@ -10,7 +10,6 @@ let anaclockID = null;
 digitalclock.addEventListener("click", openAnalogClock);
 analogclock.addEventListener("click", openDigitalClock);
 
-analogClockFace();
 openDigitalClock();
 
 function analogClockDraw() {
@@ -47,7 +46,10 @@ function analogClockFace() {
 
 function openAnalogClock() {
     anaclockID = setInterval(analogClockDraw, 100);
+    analogClockFace();
     analogClockDraw();
+
+    analogclock.style.opacity = "80%";
     clockbelt.hidden = true;
     analogclock.hidden = false;
 }
@@ -55,6 +57,7 @@ function openAnalogClock() {
 function openDigitalClock() {
     clearInterval(anaclockID);
     anaclockID = null;
+    
     analogclock.hidden = true;
     clockbelt.hidden = false;
 }

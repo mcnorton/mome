@@ -539,12 +539,12 @@ body {
     border: 3px solid white;
     background-color: transparent;
     border-radius: 50%;
-    opacity: 80%;
     cursor: pointer;
     /* background-image: url("img/_clockface.svg"); */
     background-repeat: no-repeat;
     background-position: center left;
     background-size: cover;
+    opacity: 0%;
 }
 
 .anhrs,
@@ -555,7 +555,6 @@ body {
     left: 49%;
     transform: translate(-50%, -100%);
     transform-origin: bottom;
-    border-radius: 2em;
 }
 
 .anhrs {
@@ -563,6 +562,7 @@ body {
     height: 30%;
     background-color: white;
     transform-origin: 50% 85%;
+    border-radius: 2em;
 }
 
 .anmin {
@@ -570,6 +570,7 @@ body {
     height: 45%;
     background-color: silver;
     transform-origin: 50% 85%;
+    border-radius: 0px;
 }
 
 .ansec {
@@ -577,6 +578,7 @@ body {
     height: 45%;
     background-color: #bb0000;
     transform-origin: 50% 85%;
+    border-radius: 2em;
 }
 
 .anpin {
