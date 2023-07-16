@@ -537,7 +537,8 @@ body {
     width: 30vw;
     height: 30vw;
     margin: 0 auto;
-    border: 3px solid white;
+    border: 4px solid white;
+    /* border: none; */
     background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
@@ -568,7 +569,7 @@ body {
 
 .anmin {
     width: 3%;
-    height: 45%;
+    height: 40%;
     background-color: silver;
     transform-origin: 50% 85%;
     border-radius: 0px;
@@ -576,7 +577,7 @@ body {
 
 .ansec {
     width: 1%;
-    height: 45%;
+    height: 40%;
     background-color: #bb0000;
     transform-origin: 50% 85%;
     border-radius: 2em;

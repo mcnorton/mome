@@ -4,11 +4,11 @@ const images = [
     "rose.jpg",
     "ocean.jpg",
     "business.jpg",
-    "sky.jpg",
     "rain.jpg",
     "field.jpg",
     "seoul.jpg",
-    "flower.jpg"
+    "flower.jpg",
+    "geo.png"
 ];
 
 const bglist = document.getElementById("bglist");

@@ -7,10 +7,15 @@ const anmin = document.querySelector(".anmin");
 const ansec = document.querySelector(".ansec");
 
 let anaclockID = null;
+let anaFace = 0;
+const anaFaceCount = 3;
+
 digitalclock.addEventListener("click", openAnalogClock);
 analogclock.addEventListener("click", openDigitalClock);
 
 openDigitalClock();
+
+
 
 function analogClockDraw() {
     const d = new Date();
@@ -31,8 +36,12 @@ function analogClockDraw() {
 
 
 function analogClockFace() {
+    let i = anaFace % anaFaceCount;
+
     /* 시계 배경을 무작위로 바꿀 수 있도록? */
-    analogclock.style.backgroundImage = "url('img/clockface.svg')";
+    analogclock.style.backgroundImage = `url('img/clockface${i}.svg')`;
+    console.log(i, anaFace);
+    anaFace = i + 1;
 
     /* const cface = anface.cloneNode(true);
     for (i = 0; i < 12; i ++) {
