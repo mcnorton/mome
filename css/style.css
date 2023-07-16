@@ -534,10 +534,10 @@ body {
 
 .analogclock {
     position: relative;
-    width: 30vw;
-    height: 30vw;
+    width: 33vw;
+    height: 33vw;
     margin: 0 auto;
-    border: 5px solid silver;
+    border: 0.3vw solid silver;
     /* border: none; */
     background-color: transparent;
     border-radius: 50%;
