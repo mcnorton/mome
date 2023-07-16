@@ -31,28 +31,37 @@
                 <button id="readme" class="readme"><ion-icon name="information-circle-outline"></ion-icon></button>
             </div>
 
-            <div id="bglist" class="bglist">
+            <div id="clockbelt" class="clockbelt">
+              <div id="bglist" class="bglist">
+              </div>
+
+              <div class="calen">
+                  <h3 id="calen"></h3>
+              </div>
+
+              <div class="clock">
+                  <h1 id="clock"><span class="hourmin">00:00</span><span class="second">00</span></h1>
+              </div>
+
+              <div>
+                  <form id="login-form" class="login-form hidden">
+                      <input required maxlength=15 class="login-name" type="text" placeholder="What is your name?">
+                      <input type="submit" class="login-submit" value="+">
+                  </form>
+              </div>
+
+              <div id="greeting" class="hidden">
+                  <h4></h4>
+                  <h3></h3>
+                  <button><ion-icon name="refresh-circle-outline"></ion-icon></button>
+              </div>
             </div>
 
-            <div class="calen">
-                <h3 id="calen"></h3>
-            </div>
-
-            <div class="clock">
-                <h1 id="clock"><span class="hourmin">00:00</span><span class="second">00</span></h1>
-            </div>
-
-            <div>
-                <form id="login-form" class="login-form hidden">
-                    <input required maxlength=15 class="login-name" type="text" placeholder="What is your name?">
-                    <input type="submit" class="login-submit" value="+">
-                </form>
-            </div>
-
-            <div id="greeting" class="hidden">
-                <h4></h4>
-                <h3></h3>
-                <button><ion-icon name="refresh-circle-outline"></ion-icon></button>
+            <div id="analogclock" class="analogclock">
+              <div class="anmin"></div>
+              <div class="anhrs"></div>
+              <div class="ansec"></div>
+              <div class="anpin"></div>
             </div>
 
             <div id="toolbelt" class="toolbelt">
@@ -135,6 +144,7 @@
         <script src="js/fullscreen.js"></script>
         <script src="js/timer.js"></script>
         <script src="js/pwa.js"></script>
+        <script src="js/analog.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6S6HSJQCCK"></script>
