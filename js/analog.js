@@ -49,7 +49,7 @@ function openAnalogClock() {
     analogClockFace();
     analogClockDraw();
 
-    analogclock.style.opacity = "80%";
+    analogclock.style.opacity = "100%";
     clockbelt.hidden = true;
     analogclock.hidden = false;
 }
@@ -57,7 +57,7 @@ function openAnalogClock() {
 function openDigitalClock() {
     clearInterval(anaclockID);
     anaclockID = null;
-    
+
     analogclock.hidden = true;
     clockbelt.hidden = false;
 }
