@@ -33,6 +33,14 @@ const quotes = [
         quote: "실패는 잊어라. 그러나 그것이 준 교훈은 절대 잊으면 안된다",
         author: "하버트 개서",
     },
+    {
+        quote: "먼 곳을 향하는 생각이 없다면, 큰 일을 이루기 어렵다",
+        author: "안중근",
+    },
+    {
+        quote: "눈길을 걸을 때 어지럽게 걷지 말기를, 오늘 내가 걸은 길이 훗날 다른 이들의 이정표가 되리니",
+        author: "김구",
+    },
 ];
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
