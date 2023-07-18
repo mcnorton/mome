@@ -2,9 +2,10 @@
 
 ## 접속주소 (URL)
 
-Shortcut : http://www.momemo.net
----
-Home : https://mcnorton.github.io/mome
+
+> Shortcut : http://momemo.net
+
+> Home : https://mcnorton.github.io/mome
 ---
 
 * 웹브라우저의 홈페이지나 새 탭 기본페이지로 지정하여 시계와 메모, 할일을 관리 할 수 있습니다.
@@ -39,7 +40,7 @@ Home : https://mcnorton.github.io/mome
 * 2023.03.31. 체크마크 디자인 개선
 * 2023.05.13. 전체화면보기 토글 기능
 * 2023.06.29. 미니 타이머기능 추가
-* 2023.07.18. 아날로그 시계 기능 추가 (디지털 시계를 클릭)
+* 2023.07.16. 아날로그 시계 기능 추가 (디지털 시계를 클릭)
 
 ## 앞으로...
 * 자주가는 사이트
@@ -59,21 +60,24 @@ Home : https://mcnorton.github.io/mome
 
 # 도움말
 
-## Google Chrome 새 탭에서 Mome 자동으로 열기
+## 1. Install Desktop App.
+데스크탑 앱으로 설치해서 바탕화면, 작업표시줄, 시작메뉴 등에서 편리하게 실행하세요.
+
+![mome-install](https://github.com/mcnorton/mome/assets/4551495/2e30c200-a597-4910-9610-4e3ce128675f)
+
+
+
+## 2. 크롬확장 : 새 탭에서 Mome 자동으로 열기
 새 탭을 열 때, Mome 페이지를 자동으로 열리도록 하면 엄청나게 편리합니다.
 
 ![CustomNewTabURL](https://lh3.googleusercontent.com/4lCsO0HhSqwN-U68QDFgVhLWb285-pfcoX_PHV5C6J6WuLSadROAD5iQm8kKmE8xM0qmh6XUQ0Wf0NtxFLkyB7t2=w640-h400-e365-rj-sc0x00ffffff)
 
-### 1. 'Custom New Tab URL' 설치
-* 크롬 > 설정 > 도구 더보기 > 확장프로그램 > 'Custom New Tab URL' 설치. https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/
+### 2.1 'Custom New Tab URL' 설치
+* 크롬확장설치 https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/
 
-![INSTALL](https://user-images.githubusercontent.com/4551495/148336679-ba75b0e3-1129-44f8-a3d4-58eabe255c41.png)
-
-### 2. MOME의 URL을 추가
+### 2.2 Options Enable + URL을 추가
 * 설치완료 후, 새 탭을 열고, [Enable] 체크
 * [URL or Local file path]에 https://mcnorton.github.io/mome/ 입력하고 [Save]
-
-![CONFIG](https://user-images.githubusercontent.com/4551495/148336958-b271b12e-b4c3-413c-aa4f-3ea80d6efc9b.png)
 
 
 ---
