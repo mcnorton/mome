@@ -23,8 +23,8 @@
       "sizes": "256x256",
       "type": "image/png"
     }],
-  "start_url": "/mome/",
-  "scope": "/mome/",
+  "start_url": "/",
+  "scope": "/",
   "display": "fullscreen",
   "theme_color": "#44546a",
   "background_color": "#44546a",
