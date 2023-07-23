@@ -4,6 +4,10 @@
 /* 고운돋움 구글 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
+/* ChivoMono 구글 폰트 (스코어보드용) */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@600&display=swap');
+
+
 * {
     /* 주아체 */
     /* font-family: 'Jua', sans-serif; */
@@ -44,6 +48,8 @@ body {
 /* Half Line */
 
 .left {
+    width: 50%; 
+    height: 100vh;
     text-align: center;
     margin: 0;
     display: block;
@@ -52,6 +58,8 @@ body {
 }
 
 .right {
+    width: 50%; 
+    height: 100vh;
     margin: 0;
     display: block;
     overflow: hidden;
@@ -156,6 +164,7 @@ body {
 
 
 .clock {
+    width: 100%;
     padding: 0;
     text-align: left;
     margin-top: 2vh;
@@ -164,10 +173,10 @@ body {
 }
 
 .hourmin {
+    margin-left: 8vw;
     line-height: 100%;
     letter-spacing: 1vw;
     font-size: 11vw;
-    margin: 0;
 }
 
 .second {
@@ -368,7 +377,7 @@ body {
 
 
 
-
+/* Timer */
 .timer-modal {
     position: fixed;
     z-index: 1;
@@ -415,7 +424,7 @@ body {
 }
 
 .timer-close button:hover {
-    color: gray;
+    color: #bb0000;
     text-decoration: none;
 }
 
@@ -598,12 +607,183 @@ body {
 }
 
 
+/* Scoreboard, Scorecounter */
+
+.score {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.score-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.teamblack,
+.teamwhite {
+    position: absolute;
+    display: block;
+    border: 2px solid black;
+    width: 50%;
+    height: 100%;
+}
+
+.teamblack {
+    background-color: black;
+    color: white;
+}
+
+.teamwhite {
+    background-color: white;
+    color: black;
+}
+
+.teamblack span,
+.teamwhite span {
+    font-family: 'Chivo Mono', monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 30vw;
+    letter-spacing: -2vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.tbup,
+.twup,
+.tbdn,
+.twdn {
+    cursor: pointer;
+}
+.tbup, 
+.twup {
+    position: absolute;
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+    top: 0px;
+    background-color: transparent;
+    z-index: 10;
+    border: 0px;
+    border-bottom: 2px solid white;
+    background: linear-gradient( to bottom, transparent 80%, #dedede, #787878);
+    opacity: 20%;
+}
+.tbup {
+    left: 0px;
+}
+.twup {
+    right: 0px;
+}
+
+
+.tbdn, 
+.twdn {
+    position: absolute;
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+    background-color: transparent;
+    z-index: 10;
+    border: 0px;
+    border-top: 2px solid black;
+    background: linear-gradient( to top, transparent 40%, #FFFFFF, #EEEEEE);
+    opacity: 15%;
+}
+
+.tbdn {
+    left: 0px;
+}
+.twdn {
+    right: 0px;
+}
+
+.twscore {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sbclose,
+.sbreset,
+.sbchange,
+.sbwhistle {
+    position: fixed;
+    width: 7vw;
+    height: 7vw;
+    background-color: transparent;
+    border: 0;
+    padding: 0px;
+    font-size: 4vw;
+    text-align: center;
+    z-index: 11;
+    opacity: 75%;
+    color: gray;
+    cursor: pointer;
+}
+
+.sbreset {
+    top: 0px;
+    left: 0px;
+}
+
+.sbclose {
+    top: 0px;
+    right: 0px;
+}
+
+.sbclose:hover {
+    color: #bb0000;
+}
+
+.sbchange {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sbwhistle {
+    bottom: 0px;
+    right: 0px;
+}
+
+
+
+
+
 @keyframes blink-blink {
     30% {
         opacity: 20%;
     }
 }
 
+@media( orientation: portrait ){
+    html {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100vh;
+      height: 100vw;
+    }
+}
+
+/*
 
 @media screen and (max-width: 480px) {
     .left { width: 100%; height: 40vh; }
@@ -636,3 +816,4 @@ body {
     .todo-input { font-size: 2vw; }
     .toolbelt button { font-size: 2vw; }
 }
+*/
