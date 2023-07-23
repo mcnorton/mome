@@ -89,6 +89,8 @@ body {
     border: none;
 }
 
+
+/* PWA Install */
 .install {
     margin-left: 0px;
     border: 1px solid white;
@@ -159,7 +161,7 @@ body {
 }
 
 
-/* Digital Time */
+/* Digital Clock */
 .clock {
     width: 100%;
     padding: 0;
@@ -173,8 +175,8 @@ body {
 .hourmin {
     margin-left: 5vw;
     line-height: 100%;
-    letter-spacing: 1vw;
-    font-size: 11vw;
+    letter-spacing: 0.1ch;
+    font-size: 12vw;
 }
 
 .second {
