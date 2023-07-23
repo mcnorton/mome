@@ -20,6 +20,7 @@
 body {
     color: white;
     overflow: hidden;
+    /* overflow-y: scroll; */
     margin: 0;
     background-size: cover;
     background-position: center center;
@@ -32,7 +33,6 @@ body {
 
 
 /* Slowhide, Hide Effect */
-
 .slowhide {
     opacity: 0;
     transition: 40s all;
@@ -46,7 +46,6 @@ body {
 
 
 /* Half Line */
-
 .left {
     width: 50%; 
     height: 100vh;
@@ -67,7 +66,6 @@ body {
 
 
 /* Information */
-
 .info {
     text-align: left;
 }
@@ -103,7 +101,6 @@ body {
 
 
 /* Background Wallpaper */
-
 .bglist {
     margin-bottom: 3vh;
 }
@@ -135,7 +132,7 @@ body {
 }
 
 
-
+/* Weather : disabled */
 .weather {
     font-size: 1.2vw;
     line-height: 1em;
@@ -148,7 +145,7 @@ body {
 }
 
 
-
+/* Date, Week */
 .calen {
     text-align: center;
 }
@@ -162,32 +159,37 @@ body {
 }
 
 
-
+/* Digital Time */
 .clock {
     width: 100%;
     padding: 0;
-    text-align: left;
+    text-align: center;
     margin-top: 2vh;
+    margin-right: 10vw;
     cursor: pointer;
     user-select: none;
 }
 
 .hourmin {
-    margin-left: 8vw;
+    margin-left: 5vw;
     line-height: 100%;
     letter-spacing: 1vw;
     font-size: 11vw;
 }
 
 .second {
+    display: inline-block;
+    width: 8vw;
     line-height: 100%;
     font-size: 6vw;
+    text-align: left;
     opacity: 30%;
     margin: 0;
 }
 
 
 
+/* Greeting */
 .greeting {
     text-align: center;
     display: inline-block;
@@ -214,6 +216,7 @@ body {
 }
 
 
+/* What is your name */
 .login-form {
     text-align: center;
 }
@@ -265,7 +268,7 @@ body {
 }
 
 
-
+/* To Do List */
 .todo-top{
     width: 100%;
     display: inline-block;
@@ -325,7 +328,7 @@ body {
 }
 
 
-
+/* Fullscreen mode */
 .screen {
     padding: 5px;
     position: fixed;
@@ -348,6 +351,7 @@ body {
 
 
 
+/* Tool Belt */
 .toolbelt {
     position: absolute;
     width: 100%;
@@ -375,9 +379,75 @@ body {
 }
 
 
+/* Analog Clock */
+.analogclock {
+    position: relative;
+    width: 33vw;
+    height: 33vw;
+    margin: 0 auto;
+    border: 0.3vw solid silver;
+    /* border: none; */
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    /* background-image: url("img/_clockface.svg"); */
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+    opacity: 0%;
+}
+
+.anhrs,
+.anmin,
+.ansec {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom;
+}
+
+.anhrs {
+    width: 4%;
+    height: 30%;
+    background-color: white;
+    transform-origin: 50% 85%;
+    border-radius: 3px;
+}
+
+.anmin {
+    width: 3%;
+    height: 40%;
+    background-color: silver;
+    transform-origin: 50% 85%;
+    border-radius: 2em;
+}
+
+.ansec {
+    width: 1%;
+    height: 40%;
+    background-color: #bb0000;
+    transform-origin: 50% 85%;
+    border-radius: 2em;
+}
+
+.anpin {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2%;
+    right: 0;
+    width: 1.5%;
+    height: 1.5%;
+    margin: auto;
+    border: 4px solid #bb0000;
+    border-radius: 50%;
+    background-color: black;
+}
 
 
-/* Timer */
+
+/* Tool 1 - Timer */
 .timer-modal {
     position: fixed;
     z-index: 1;
@@ -456,11 +526,15 @@ body {
     border-radius: 50%;
     text-align: center;
     line-height: 10vw;
-    font-size: 2.5vw;
     transform: translate(-50%, -50%);
-    color: black;
 }
 
+.timer-time span {
+    color: black;
+    font-size: 2.5vw;
+    font-family: 'Chivo Mono', monospace;
+    letter-spacing: -0.1ch;
+}
 
 .timer-control {
     position: absolute;
@@ -539,76 +613,7 @@ body {
 }
 
 
-/* Analog Clock */
-
-.analogclock {
-    position: relative;
-    width: 33vw;
-    height: 33vw;
-    margin: 0 auto;
-    border: 0.3vw solid silver;
-    /* border: none; */
-    background-color: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    /* background-image: url("img/_clockface.svg"); */
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: cover;
-    opacity: 0%;
-}
-
-.anhrs,
-.anmin,
-.ansec {
-    position: absolute;
-    top: 50%;
-    left: 49%;
-    transform: translate(-50%, -100%);
-    transform-origin: bottom;
-}
-
-.anhrs {
-    width: 4%;
-    height: 30%;
-    background-color: white;
-    transform-origin: 50% 85%;
-    border-radius: 3px;
-}
-
-.anmin {
-    width: 3%;
-    height: 40%;
-    background-color: silver;
-    transform-origin: 50% 85%;
-    border-radius: 2em;
-}
-
-.ansec {
-    width: 1%;
-    height: 40%;
-    background-color: #bb0000;
-    transform-origin: 50% 85%;
-    border-radius: 2em;
-}
-
-.anpin {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -2%;
-    right: 0;
-    width: 1.5%;
-    height: 1.5%;
-    margin: auto;
-    border: 4px solid #bb0000;
-    border-radius: 50%;
-    background-color: black;
-}
-
-
-/* Scoreboard, Scorecounter */
-
+/* Tool 2 - Scoreboard, Scorecounter */
 .score {
     position: fixed;
     left: 0px;
@@ -619,6 +624,7 @@ body {
     width: 100%;
     height: 100%;
     display: none;
+    user-select: none;
 }
 
 .score-body {
@@ -654,7 +660,7 @@ body {
     left: 50%;
     text-align: center;
     font-size: 30vw;
-    letter-spacing: -2vw;
+    letter-spacing: -0.1ch;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -724,13 +730,15 @@ body {
 .sbchange,
 .sbwhistle {
     position: fixed;
+    display: flex; /* 아이콘 정렬 스타일 */
     width: 7vw;
     height: 7vw;
     background-color: transparent;
     border: 0;
     padding: 0px;
     font-size: 4vw;
-    text-align: center;
+    align-items: center; /* 세로 중간정렬 */
+    justify-content: center; /* 가로 중앙정렬 */
     z-index: 11;
     opacity: 75%;
     color: gray;
