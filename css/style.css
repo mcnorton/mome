@@ -685,7 +685,7 @@ body {
     z-index: 10;
     border: 0px;
     border-bottom: 2px solid white;
-    background: linear-gradient( to bottom, transparent 80%, #dedede, #787878);
+    background: linear-gradient( to bottom, transparent 20%, #dedede, #686868);
     opacity: 20%;
 }
 .tbup {
@@ -694,7 +694,6 @@ body {
 .twup {
     right: 0px;
 }
-
 
 .tbdn, 
 .twdn {
@@ -707,7 +706,7 @@ body {
     z-index: 10;
     border: 0px;
     border-top: 2px solid black;
-    background: linear-gradient( to top, transparent 40%, #FFFFFF, #EEEEEE);
+    background: linear-gradient( to top, transparent 10%, #FFFFFF, #EEEEEE);
     opacity: 15%;
 }
 
