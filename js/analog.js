@@ -40,7 +40,6 @@ function analogClockFace() {
 
     /* 시계 배경을 무작위로 바꿀 수 있도록? */
     analogclock.style.backgroundImage = `url('img/clockface${i}.svg')`;
-    console.log(i, anaFace);
     anaFace = i + 1;
 
     /* const cface = anface.cloneNode(true);
@@ -58,7 +57,6 @@ function openAnalogClock() {
     analogClockFace();
     analogClockDraw();
 
-    analogclock.style.opacity = "100%";
     clockbelt.hidden = true;
     analogclock.hidden = false;
 }
