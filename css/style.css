@@ -363,11 +363,8 @@ body {
     bottom: 7vmin;
 }
 
-.toolbelt div {
-    display: inline-block;
-}
-
 .toolbelt button {
+    display: inline-block;
     height: 4vw;
     width: 4vw;
     border: 0px solid white;
