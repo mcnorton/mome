@@ -4,11 +4,11 @@ const teamblack = document.getElementById("teamblack");
 const tbscore = document.getElementById('tbscore');
 const twscore = document.getElementById('twscore');
 
-const SCOREBOARD_SOUND = "snd/whistle.mp3";
 
-// #init Board position, window status
+// #init Board position, window status, sound source
 let setchange = 0;
 let sbfullscreenflag = false;
+const SCOREBOARD_SOUND = "snd/whistle.mp3";
 teamblack.style.left = "0px";
 teamwhite.style.right = "0px";
 document.getElementById("sbreset").setAttribute("title", "** Double Click");
@@ -46,10 +46,14 @@ document.getElementById("sbwhistle").addEventListener('click', function() {
     referee.play();
 });
 document.getElementById("sbclose").addEventListener('click', function() {
-    if (!sbfullscreenflag) {
+    //scoreboard.style.display = "none";
+    scoreboard.style.display = "none";
+
+    if (sbfullscreenflag == true) {
+        document.documentElement.requestFullscreen();
+    } else {
         document.exitFullscreen();
     }
-    scoreboard.style.display = "none";
 });
 
 
@@ -57,10 +61,10 @@ function onClickScoreOpen() {
     scoreboard.style.display = "inherit";
 
     // 스코어보드가 실행되기 전 상태를 보관합니다.
-    if (document.fullscreenElement) {
-        sbfullscreenflag = true;
-    } else {
+    if (document.fullscreenElement === null) {
         sbfullscreenflag = false;
+    } else {
+        sbfullscreenflag = true;
     }
     document.documentElement.requestFullscreen();
 }

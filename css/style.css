@@ -256,7 +256,7 @@ body {
     overflow: hidden;
     padding: none;
     text-align: center;
-    bottom: 2vw;
+    bottom: 2vmin;
 }
 
 .quote p {
@@ -360,7 +360,7 @@ body {
     overflow: hidden;
     padding: 3vh 0;
     text-align: center;
-    bottom: 5vw;
+    bottom: 7vmin;
 }
 
 .toolbelt div {
@@ -395,7 +395,7 @@ body {
     background-repeat: no-repeat;
     background-position: center left;
     background-size: cover;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 .anhrs,
@@ -420,9 +420,10 @@ body {
 .anmin {
     width: 3%;
     height: 45%;
-    background-color: silver;
+    background-color: white;
     transform-origin: 50% 85%;
     border-radius: 2em;
+    opacity: 60%
 }
 
 .ansec {
@@ -788,8 +789,11 @@ body {
       position: absolute;
       top: 100%;
       left: 0;
-      width: 100vh;
-      height: 100vw;
+      width: 100vmax;
+      height: 100vmin;
+    }
+    .quote {
+        bottom: 2vmax;
     }
 }
 
