@@ -409,7 +409,7 @@ body {
     width: 4%;
     height: 30%;
     transform-origin: 50% 85%;
-    border: 4px solid white;
+    border: 0.2em solid white;
     background-color: transparent;
     border-radius: 2em;
 }
@@ -420,6 +420,7 @@ body {
     background-color: white;
     transform-origin: 50% 85%;
     border-radius: 2em;
+    border: 0.1em solid black;
     opacity: 60%
 }
 
