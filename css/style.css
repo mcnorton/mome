@@ -249,14 +249,19 @@ body {
 }
 
 
-
-.quote {
+/* Left bottom objects */
+.leftbottom {
     position: absolute;
     width: 100%;
+    bottom: 2vmin;
     overflow: hidden;
+}
+
+
+
+.quote {
     padding: none;
     text-align: center;
-    bottom: 2vmin;
 }
 
 .quote p {
@@ -355,12 +360,10 @@ body {
 
 /* Tool Belt */
 .toolbelt {
-    position: absolute;
     width: 100%;
     overflow: hidden;
-    padding: 3vh 0;
+    padding: 1vh 0;
     text-align: center;
-    bottom: 7vmin;
 }
 
 .toolbelt button {
