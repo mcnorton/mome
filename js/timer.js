@@ -10,6 +10,7 @@ const PerSec = 0.1; // 1 = 1sec, 0.1 = 1/10 sec
 const OneSec = 1000; // 1sec
 const GraphFps = OneSec * PerSec; // Framerate 10fps (1/10sec) : smooth
 const KEY_TIMER = "timer"; // Localstorage label
+const FINISH_SOUND = "snd/battleship2.mp3"; // Music by Hot_Music from Pixabay
 
 let savedTime = Math.floor(localStorage.getItem(KEY_TIMER));
 
@@ -55,7 +56,7 @@ timerTitle.addEventListener("blur", function() {
 // timesupSound.src = "snd/cuckoo12.mp3";
 
 // 2307변경. 숲속 새소리 Pixabay Free Sound
-timesupSound.src = "snd/birds.mp3";
+timesupSound.src = FINISH_SOUND;
 drawTimer();
 
 function timesupSoundOff() {
