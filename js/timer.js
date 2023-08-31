@@ -4,6 +4,7 @@ const timerDisplay = document.querySelector("#timer-time > span");
 const timerClose = document.getElementById("timer-close-button");
 const timesupPopup = document.getElementById("timer-timeup-dialog");
 const timesupSound = document.getElementById("timesup-sound");
+const timerTitle = document.querySelector("#timer-title > input");
 
 const PerSec = 0.1; // 1 = 1sec, 0.1 = 1/10 sec
 const OneSec = 1000; // 1sec
@@ -26,6 +27,7 @@ let SetMtime = Math.floor(savedTime); // 분단위로 타이머를 설정합니�
 let NowSec = 0;
 let CntSec = 0;
 let IntvID = null;
+let defaultTimerTitle = timerTitle.placeholder;
 
 document.getElementById("timer-open").addEventListener("click", onClickTimerOpen);
 document.querySelector("#timer-timeup-dialog > button").addEventListener("click", onClickTimerReset);
@@ -36,6 +38,18 @@ document.getElementById("timer-5min-plus").addEventListener("click", onClickTime
 document.getElementById("timer-5min-minus").addEventListener("click", onClickTimerCtrlM5);
 document.getElementById("timer-pause").addEventListener("click", onClickTimerPause);
 document.getElementById("timer-reset").addEventListener("click", onClickTimerReset);
+
+timerTitle.addEventListener("focus", function() {
+  if (this.value == "") { 
+    this.placeholder = "";
+  } 
+});
+
+timerTitle.addEventListener("blur", function() {
+  if (this.value == "") {
+    this.placeholder = defaultTimerTitle;
+  }
+});
 
 // 12시를 알리는 뻐꾸기 시계 Pixabay Free Sound
 // timesupSound.src = "snd/cuckoo12.mp3";
