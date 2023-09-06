@@ -683,6 +683,30 @@ body {
     z-index: 2;
 }
 
+.teamblack input,
+.teamwhite input {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+    font-size: 4vw;
+    opacity: 40%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    border: none;
+    background-color: transparent;
+    z-index: 11;
+    outline: none;
+    cursor: pointer;
+}
+
+.teamblack input {
+    color: white;
+}
+
+.teamwhite input {
+    color: black;
+}
 
 .tbup,
 .twup,
@@ -757,7 +781,7 @@ body {
     font-size: 4vw;
     align-items: center; /* 세로 중간정렬 */
     justify-content: center; /* 가로 중앙정렬 */
-    z-index: 11;
+    z-index: 20;
     opacity: 75%;
     color: gray;
     cursor: pointer;

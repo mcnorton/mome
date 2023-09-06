@@ -3,11 +3,16 @@ const teamwhite = document.getElementById("teamwhite");
 const teamblack = document.getElementById("teamblack");
 const tbscore = document.getElementById('tbscore');
 const twscore = document.getElementById('twscore');
+const tbtitle = document.getElementById('tbtitle');
+const twtitle = document.getElementById('twtitle');
 
 
 // #init Board position, window status, sound source
 let setchange = 0;
 let sbfullscreenflag = false;
+let defTbTitle = tbtitle.placeholder;
+let defTwTitle = twtitle.placeholder;
+
 const SCOREBOARD_SOUND = "snd/whistle.mp3";
 teamblack.style.left = "0px";
 teamwhite.style.right = "0px";
@@ -55,6 +60,44 @@ document.getElementById("sbclose").addEventListener('click', function() {
         document.exitFullscreen();
     }
 });
+
+tbtitle.addEventListener('dblclick', function() {
+    this.readOnly = false;
+    if (this.value == "") { 
+        this.placeholder = "";
+    }
+});
+
+tbtitle.addEventListener('blur', function() {
+    this.readOnly = true;
+    if (this.value == "") {
+        this.placeholder = defTbTitle;
+    }
+});
+
+tbtitle.addEventListener('click', function() {
+    this.readOnly = true;
+});
+
+twtitle.addEventListener('dblclick', function() {
+    this.readOnly = false;
+    if (this.value == "") { 
+        this.placeholder = "";
+    }
+});
+
+twtitle.addEventListener('blur', function() {
+    this.readOnly = true;
+    if (this.value == "") {
+        this.placeholder = defTwTitle;
+    }
+});
+
+twtitle.addEventListener('click', function() {
+    this.readOnly = true;
+});
+
+
 
 
 function onClickScoreOpen() {
