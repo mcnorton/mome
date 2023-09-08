@@ -52,10 +52,6 @@ timerTitle.addEventListener("blur", function() {
   }
 });
 
-// 12시를 알리는 뻐꾸기 시계 Pixabay Free Sound
-// timesupSound.src = "snd/cuckoo12.mp3";
-
-// 2307변경. 숲속 새소리 Pixabay Free Sound
 timesupSound.src = FINISH_SOUND;
 drawTimer();
 
@@ -94,7 +90,7 @@ function onClickTimerReset() {
 
 
 function onClickTimerPause() {
-  const pauseIcon = document.querySelector("#timer-pause>ion-icon");
+  const pauseIcon = document.querySelector("#timer-pause > ion-icon");
 
   if (IntvID !== null) {
     clearInterval(IntvID);
