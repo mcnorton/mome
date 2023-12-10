@@ -6,22 +6,31 @@ const timesupPopup = document.getElementById("timer-timeup-dialog");
 const timesupSound = document.getElementById("timesup-sound");
 const timerTitle = document.querySelector("#timer-title > input");
 
+const DAY = 24;
+const HUR = 60;
+const MIN = 60;
+const SEC = 60;
+const MIS = 1000;
+
 const PerSec = 0.1; // 1 = 1sec, 0.1 = 1/10 sec
-const OneSec = 1000; // 1sec
-const GraphFps = OneSec * PerSec; // Framerate 10fps (1/10sec) : smooth
-const KEY_TIMER = "timer"; // Localstorage label
-const FINISH_SOUND = "snd/epic.mp3"; // Music from Pixabay
+const OneSec = MIS;
+const GraphFps = PerSec * MIS; // Framerate 10fps (1/10sec) : smoothly
+const KEY_TIMER = "timer"; // Localstorage key name
+const FINISH_SOUND = "snd/epic.mp3"; // FREE BGMusic from Pixabay
+const DEFAULT_TIME = 10; // (minutes) 기본시간값 10분
+const MAX_TIME = 99; // (minutes) 최대시간값 99분
 
 let savedTime = Math.floor(localStorage.getItem(KEY_TIMER));
+let finishTime = Date.now(); // finish time
 
 if (savedTime === null || savedTime <= 0) {
-  savedTime = 10; // 기본값을 10분으로 초기화
+  savedTime = DEFAULT_TIME; // 기본값으로 초기화
   localStorage.setItem(KEY_TIMER, savedTime);
 }
 
-if (savedTime >= 99) {
-  savedTime = 99; // 저장된 값이 99분을 넘는다면, 99분으로 초기화 (예방차원)
-  localStorage.setItem(KEY_TIMER, savedTime);
+if (savedTime >= MAX_TIME) { // 스토리지에 저장된 시간값이 최대값을 넘어서는지 확인 (예방)
+  savedTime = MAX_TIME; // 저장된 값이 최대시간을 넘는다면, 초기화
+  localStorage.setItem(KEY_TIMER, savedTime); // 스토리지에 재저장
 }
 
 let SetMtime = Math.floor(savedTime); // 분단위로 타이머를 설정합니다.
@@ -73,7 +82,8 @@ function onClickTimerOpen() {
 
 function onClickTimerReset() {
   if (IntvID !== null) {
-    clearInterval(IntvID);
+    //clearInterval(IntvID);
+    clearTimeout(IntvID);
     IntvID = null;
   }
 
@@ -93,12 +103,17 @@ function onClickTimerPause() {
   const pauseIcon = document.querySelector("#timer-pause > ion-icon");
 
   if (IntvID !== null) {
-    clearInterval(IntvID);
+    //clearInterval(IntvID);
+    clearTimeout(IntvID);
     IntvID = null;
     pauseIcon.name = "play";
   } else {
     IntvID = setInterval(drawTimer, GraphFps);
     pauseIcon.name = "pause";
+    /*IntvID = setTimeout( function runTimer() {
+      drawTimer();
+      IntvID = setTimeout(runTimer, GraphFps);
+    }, 0);*/
   }
 }
 
@@ -106,6 +121,7 @@ function onClickTimerPause() {
 function onClickTimerClose() {
   if (IntvID !== null) {
     clearInterval(IntvID);
+    //clearTimeout(IntvID);
     IntvID = null;
   }
   onClickTimerReset();
@@ -190,6 +206,7 @@ function drawTimer() {
 
     if (CntSec <= 0) { 
       clearInterval(IntvID);
+      // clearTimeout(IntvID);
       openTimesUp();
     } else {
       NowSec++;
