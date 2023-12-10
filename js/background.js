@@ -21,7 +21,7 @@ const images = [
     "cozypopcorn.jpg",
     "czech.jpg",
     "interior.jpg",
-    "tallinn.jpg",
+    "snowflake.jpg",
     "woodwall.jpg",
     "books.jpg",
     "fireplace.jpg"
