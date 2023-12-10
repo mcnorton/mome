@@ -1,7 +1,10 @@
-const info = document.getElementById("readme");
+const inforeadme = document.getElementById("readme");
+const inforeload = document.getElementById("reload");
 
-info.addEventListener("click", onClickInfo);
-
-function onClickInfo() {
+inforeadme.addEventListener("click", function() {
     window.open("https://github.com/mcnorton/mome/blob/master/README.md", "mome_info");
-}
+});
+
+inforeload.addEventListener("click", function() { 
+    location.reload(true);
+});
