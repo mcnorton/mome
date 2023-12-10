@@ -12,6 +12,8 @@ const KEY_USERNAME = "username";
 
 const savedUsername = localStorage.getItem(KEY_USERNAME)
 
+let t_seq = 0;
+
 if (savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
 } else {
@@ -21,7 +23,7 @@ if (savedUsername === null) {
 loginForm.addEventListener("submit", onLoginSubmit);
 logout.addEventListener ("click", onLogoutSubmit);
 
-
+setInterval(printSayhello, 1000 * 60 * 30);
 
 function onLoginSubmit(event) {
     event.preventDefault();
@@ -40,6 +42,15 @@ function onLogoutSubmit(event) {
 }
 
 function printGreeting(username) {
+
+    printSayhello();
+
+    sayname.innerText = username;
+    greeting.classList.add(GREETING_CLASSNAME)
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+function printSayhello() {
     const date = new Date();
     const hour = Number(date.getHours());
     let say = "Good Afternoon";
@@ -51,8 +62,4 @@ function printGreeting(username) {
     }
 
     sayhello.innerText = say;
-    sayname.innerText = username;
-    greeting.classList.add(GREETING_CLASSNAME)
-    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-
