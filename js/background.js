@@ -1,3 +1,5 @@
+// Autum 
+/*
 const images = [
     "",
     "spring.jpg",
@@ -9,7 +11,23 @@ const images = [
     "seoul.jpg",
     "flower.jpg",
     "geo.png"
+]; */
+
+// Winter
+const images = [
+    "",
+    "candle.jpg",
+    "chess.jpg",
+    "cozypopcorn.jpg",
+    "czech.jpg",
+    "interior.jpg",
+    "tallinn.jpg",
+    "woodwall.jpg",
+    "books.jpg",
+    "fireplace.jpg"
 ];
+
+
 
 const bglist = document.getElementById("bglist");
 const background = document.body;
