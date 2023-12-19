@@ -3,6 +3,7 @@ const chalkbody = document.getElementById('chalk-body');
 const chalkmsg = document.getElementById('chalk-msg');
 const chalkclose = document.getElementById('chalk-close');
 const chalkrightmenu = document.getElementById('right');
+const chalkgreeting = document.getElementById('greeting');
 
 const chalkicon = document.createElement('ion-icon');
     chalkicon.setAttribute('name', 'create-outline');
@@ -15,11 +16,13 @@ chalkmsg.setAttribute('rows', '1');
 document.getElementById("chalk-open").addEventListener("click", function() {
     chalk.style.display = "inherit";
     chalkrightmenu.style.visibility = "hidden";
+    chalkgreeting.style.visibility = "hidden";
 });
 
 document.getElementById("chalk-close").addEventListener('click', function() {
     chalk.style.display = "none";
     chalkrightmenu.style.visibility = "visible";
+    chalkgreeting.style.visibility = "visible";
 });
 
 chalkmsg.addEventListener('dblclick', function() {
