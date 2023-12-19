@@ -837,8 +837,81 @@ body {
 }
 
 
+/******************************************************************/
+/* chalk BOARD                                                    */
+/******************************************************************/
+.chalk {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    display: none; 
+    text-align: center;
+}
+
+.chalk-title {
+    position: relative;
+    z-index: 10;
+    float: right;
+    right: 10px;
+    top: 10px; 
+}
+
+.chalk-body {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 4vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.chalk-body > textarea {
+    z-index: 20;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 4vw;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    resize: none;
+}
+
+.chalk-close {
+    position: fixed;
+    display: flex; /* 아이콘 정렬 스타일 */
+    width: 7vw;
+    height: 7vw;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0px;
+    font-size: 4vw;
+    align-items: center; /* 세로 중간정렬 */
+    justify-content: center; /* 가로 중앙정렬 */
+    z-index: 20;
+    opacity: 75%;
+    color: white;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+}
 
 
+
+/*********************************************************/
 
 @keyframes blink-blink {
     30% {
