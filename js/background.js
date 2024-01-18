@@ -16,6 +16,7 @@ const images = [
 // Winter
 const images = [
     "",
+    "enjoy.jpg",
     "candle.jpg",
     "chess.jpg",
     "cozypopcorn.jpg",
