@@ -3,9 +3,8 @@
 ## 접속주소 (URL)
 
 
-> Shortcut : http://momemo.net
+> Shortcut : httpS://momemo.net
 
-> Home : https://mcnorton.github.io/mome
 ---
 
 * 웹브라우저의 홈페이지나 새 탭 기본페이지로 지정하여 시계와 메모, 할일을 관리 할 수 있습니다.
