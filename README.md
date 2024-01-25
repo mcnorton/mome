@@ -3,7 +3,7 @@
 ## 접속주소 (URL)
 
 
-> Shortcut : httpS://momemo.net
+> Shortcut : https://momemo.net
 
 ---
 
