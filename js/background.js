@@ -14,7 +14,7 @@ const images = [
 ]; */
 
 // Winter
-const images = [
+/* const images = [
     "",
     "enjoy.jpg",
     "candle.jpg",
@@ -26,8 +26,22 @@ const images = [
     "woodwall.jpg",
     "books.jpg",
     "fireplace.jpg"
-];
+]; */
 
+// Spring
+const images = [
+    "",
+    "treebirds.jpg",
+    "seedlings.jpg",
+    "wooden.jpg",
+    "spring.jpg",
+    "buttercups.jpg",
+    "cherry-blossoms.jpg",
+    "tulips_y.jpg",
+    "tulips_w.jpg",
+    "springcb.jpg",
+    "enjoy.jpg"
+]
 
 
 const bglist = document.getElementById("bglist");
