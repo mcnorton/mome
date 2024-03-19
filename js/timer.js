@@ -85,9 +85,12 @@ function onClickTimerOpen() {
 }
 
 function onClickTimerBGM() {
+  const bgmbutton = document.getElementById("timer-bgm");
   if (timerBGSound.paused) {
+    bgmbutton.style.color = "red";
     timerBGSound.play();
   } else {
+    bgmbutton.style.color = "black";
     timerBGSound.pause();
   }
 }
@@ -125,11 +128,11 @@ function onClickTimerPause() {
     clearTimeout(IntvID);
     IntvID = null;
     pauseIcon.name = "play";
-    timerBGSound.pause();
+    //timerBGSound.pause();
   } else {
     IntvID = setInterval(drawTimer, GraphFps);
     pauseIcon.name = "pause";
-    timerBGSound.play();
+    //timerBGSound.play();
     /*IntvID = setTimeout( function runTimer() {
       drawTimer();
       IntvID = setTimeout(runTimer, GraphFps);
@@ -167,9 +170,6 @@ function onClickTimerCtrlP1() {
 function onClickTimerCtrlM1() {
   const t = 1;
   const n = NowSec--;
-
-  console.log(t);
-  console.log(SetMtime);
 
   if ((SetMtime - t) > 0) { // 남은 시간이 1분 보다 클 때만 시간을 줄임
     SetMtime = SetMtime - Math.floor(t);

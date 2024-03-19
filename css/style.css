@@ -605,6 +605,10 @@ body {
     border: 1px solid silver;
 }
 
+.timer-control button:active {
+    color: red;
+}
+
 .timer-reset > ion-icon ,
 .timer-pause > ion-icon {
     color: red;
