@@ -4,6 +4,7 @@ const timerDisplay = document.querySelector("#timer-time > span");
 const timerClose = document.getElementById("timer-close-button");
 const timesupPopup = document.getElementById("timer-timeup-dialog");
 const timesupSound = document.getElementById("timesup-sound");
+const timerBGSound = document.getElementById("timer-bgsound");
 const timerTitle = document.querySelector("#timer-title > input");
 
 const DAY = 24;
@@ -17,6 +18,7 @@ const OneSec = MIS;
 const GraphFps = PerSec * MIS; // Framerate 10fps (1/10sec) : smoothly
 const KEY_TIMER = "timer"; // Localstorage key name
 const FINISH_SOUND = "snd/epic.mp3"; // FREE BGMusic from Pixabay
+const BGM_SOUND = "snd/hawaii-five-o.mp3"; // Free BGM : https://archive.org/details/tvtunes_18715
 const DEFAULT_TIME = 10; // (minutes) 기본시간값 10분
 const MAX_TIME = 99; // (minutes) 최대시간값 99분
 
@@ -48,6 +50,7 @@ document.getElementById("timer-5min-plus").addEventListener("click", onClickTime
 document.getElementById("timer-5min-minus").addEventListener("click", onClickTimerCtrlM5);
 document.getElementById("timer-pause").addEventListener("click", onClickTimerPause);
 document.getElementById("timer-reset").addEventListener("click", onClickTimerReset);
+document.getElementById("timer-bgm").addEventListener("click", onClickTimerBGM);
 
 timerTitle.addEventListener("focus", function() {
   if (this.value == "") { 
@@ -62,6 +65,8 @@ timerTitle.addEventListener("blur", function() {
 });
 
 timesupSound.src = FINISH_SOUND;
+timerBGSound.src = BGM_SOUND;
+
 drawTimer();
 
 function timesupSoundOff() {
@@ -79,6 +84,18 @@ function onClickTimerOpen() {
   onClickTimerReset();
 }
 
+function onClickTimerBGM() {
+  if (timerBGSound.paused) {
+    timerBGSound.play();
+  } else {
+    timerBGSound.pause();
+  }
+}
+
+function timerBGMoff() {
+  timerBGSound.pause();
+  timerBGSound.currentTime = 0;
+}
 
 function onClickTimerReset() {
   if (IntvID !== null) {
@@ -86,8 +103,9 @@ function onClickTimerReset() {
     clearTimeout(IntvID);
     IntvID = null;
   }
-
+  
   timesupSoundOff();
+  timerBGMoff();
   timesupPopup.style.visibility = "hidden";
 
   document.querySelector("#timer-pause > ion-icon").name = "play";
@@ -107,9 +125,11 @@ function onClickTimerPause() {
     clearTimeout(IntvID);
     IntvID = null;
     pauseIcon.name = "play";
+    timerBGSound.pause();
   } else {
     IntvID = setInterval(drawTimer, GraphFps);
     pauseIcon.name = "pause";
+    timerBGSound.play();
     /*IntvID = setTimeout( function runTimer() {
       drawTimer();
       IntvID = setTimeout(runTimer, GraphFps);
@@ -125,6 +145,7 @@ function onClickTimerClose() {
     IntvID = null;
   }
   onClickTimerReset();
+  timerBGMoff();
   timerModal.style.display = "none";
   timesupPopup.style.visibility = "hidden";
 }
@@ -147,7 +168,10 @@ function onClickTimerCtrlM1() {
   const t = 1;
   const n = NowSec--;
 
-  if (SetMtime > (t)) { // 남은 시간이 1분 보다 클 때만 시간을 줄임
+  console.log(t);
+  console.log(SetMtime);
+
+  if ((SetMtime - t) > 0) { // 남은 시간이 1분 보다 클 때만 시간을 줄임
     SetMtime = SetMtime - Math.floor(t);
   }
   setLocalTimer(SetMtime);
@@ -181,7 +205,6 @@ function onClickTimerCtrlM5() {
   drawTimer();
   NowSec = n;
 }
-
 
 function drawTimer() {
   let s = Math.floor(SetMtime); // 세팅된 시간의 처음 값을 기억해 둡니다.
@@ -231,6 +254,7 @@ function setLocalTimer(s) {
 
 
 function openTimesUp() {
+  timerBGMoff();
   timesupSoundOn();
   timerGraph.style.background = "conic-gradient(#eeeeee 100%, white 100%)";
   timerDisplay.innerHTML = secToTime(SetMtime * 60 * 10);
