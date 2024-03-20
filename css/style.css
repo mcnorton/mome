@@ -934,6 +934,11 @@ body {
         width: 100vh;
         height: 100vw;
     }
+
+    .left,
+    .right {
+        height: 100vw;
+    }
 }
 
 /*
