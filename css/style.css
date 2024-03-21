@@ -913,8 +913,40 @@ body {
     right: 0px;
 }
 
+/******************************************************************/
+/* Rotation icon                                                  */
+/******************************************************************/
+.rotation {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
 
+.rotation > div {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
 
+.rotation-icon {
+    text-align: center;
+    font-size: 5vh;
+    line-height: 1.1em;
+    margin-bottom: 0em;
+}
+
+.rotation-msg {
+    text-align: center;
+    font-size: 2vh;
+    line-height: 1em;
+}
 /*********************************************************/
 
 @keyframes blink-blink {
@@ -925,7 +957,7 @@ body {
 
 
 @media only screen and (max-aspect-ratio: 4/5) and (orientation: portrait) {
-    html {
+/*    html {
         transform: rotate(-90deg);
         transform-origin: top left;
         position: absolute;
@@ -934,10 +966,17 @@ body {
         width: 100vh;
         height: 100vw;
     }
-
-    .left,
+*/
     .right {
         height: 100vw;
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+    .rotation {
+        display: inherit;
     }
 }
 
