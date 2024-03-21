@@ -956,7 +956,7 @@ body {
 }
 
 
-@media only screen and (max-aspect-ratio: 4/5) and (orientation: portrait) {
+@media only screen and (max-aspect-ratio: 4/4) and (orientation: portrait) {
 /*    html {
         transform: rotate(-90deg);
         transform-origin: top left;
