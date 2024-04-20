@@ -2,7 +2,7 @@
 순간을 메모하세요. (Moment + Memo = MoMemo)   
 시계 + 메모 + 체크리스트 & 유용한 도구들
 
-## 주소 (URL)
+## URL
 
 > https://www.momemo.net
 
@@ -14,11 +14,11 @@
 * 간단한 도구들로 쓸모있게 활용하세요. (아날로그시계, 타이머, 경기점수판, 화이트보드)
 
 
-![mome](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)
+![momemo](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)
 
 
 
-## 특징
+## Feature
 * 웹폰트를 적용하여 가독성을 높임
 * Vanilla Javascript, HTML, CSS 로만 제작
 * 완료된 할일과 메모를 체크, 천천히 사라지는 동안 마음을 정리
@@ -26,7 +26,7 @@
 * [INSTALL Desktop App] 버튼을 눌러 데스크탑 앱으로 설치 가능 (new)
 * 브라우저의 확장프로그램을 이용해, **새 탭에서 자동**으로 열기 응용 가능
 
-## 기능
+## Function
 1. 날짜 표시
 2. 대형 숫자 시계 - 12시간제
 3. 대형 아날로그 시계 - 3가지 종류 (숫자-아날로그 전환)
@@ -37,13 +37,13 @@
 8. 화이트 보드
 9. 스코어 보드 (경기용)
 
-## 용도
+## Using
 * 개인의 업무용 메모보드, To Do List
 * 교실의 대형화면을 활용한 현재시각, 수업안내, 알림장, 타이머, 안내판, 게임점수판
 * 전체화면 모드로 행사장 안내판, 예약 현황판
 * 프로젝트 관리용 당일/주간 업무일정, 공지사항
 
-## 히스토리
+## Update
 * 2021.10.15. 시작
 * 2021.12.08. 코드 최적화
 * 2022.01.26. 반응형 웹 적용, Fixed Font로 변경, 배경화면 고정
@@ -57,8 +57,9 @@
 * 2023.12.19. 간단한 칠판(초크보드) 기능
 * 2024.03.03. 봄 테마로 배경 업데이트
 * 2024.03.19. 타이머 배경음악 재생 기능 (Hawaii Five O Theme)
+* 2024.04.20. Mome => MoMemo 로 재명명
 
-## 앞으로...
+## Ready...
 * 자주가는 사이트 링크
 * 화이트 노이즈
 * 정각 알림
@@ -69,6 +70,8 @@
 * 주크박스
 
 ---
+# Screenshot
+
  ## 2021-2022 
   ![memo2021](https://user-images.githubusercontent.com/4551495/145520765-96e5085f-88bc-4c2b-bd85-5e37fa8d4402.png)
 
@@ -83,7 +86,7 @@
 ## 1. Install Desktop App.
 데스크탑 앱으로 설치해서 바탕화면, 작업표시줄, 시작메뉴 등에서 편리하게 실행하세요.
 
-![mome-install](https://github.com/mcnorton/mome/assets/4551495/2e30c200-a597-4910-9610-4e3ce128675f)
+![momemo-install](https://github.com/mcnorton/mome/assets/4551495/2e30c200-a597-4910-9610-4e3ce128675f)
 
 
 
