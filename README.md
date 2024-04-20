@@ -1,16 +1,17 @@
-# 모메모(Momemo) Moment+Memo
+# 모메모 (MoMemo) 1.0
+순간을 메모하세요. (Moment + Memo = MoMemo)   
+시계 + 메모 + 체크리스트 & 유용한 도구들
 
-## 접속주소 (URL)
+## 주소 (URL)
 
-
-> Shortcut : https://www.momemo.net
+> https://www.momemo.net
 
 ---
 
 * 웹브라우저의 홈페이지나 새 탭 기본페이지로 지정하여 시계와 메모, 할일을 관리 할 수 있습니다.
 * 순간을 기록하세요. Moment + Memo = Mome
 * 저장된 목록은 사용자의 웹 브라우저에만 기록됩니다.
-* 간단한 도구들로 쓸모있게 활용하세요. (아날로그시계, 타이머)
+* 간단한 도구들로 쓸모있게 활용하세요. (아날로그시계, 타이머, 경기점수판, 화이트보드)
 
 
 ![mome](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)
