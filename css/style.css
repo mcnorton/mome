@@ -230,6 +230,8 @@ body {
 .login-form input {
     outline: none;
     color: white;
+    font-size: 3vw;
+    text-align: center;
 }
 
 .login-name {
