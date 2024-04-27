@@ -81,6 +81,8 @@ function timesupSoundOn() {
 
 function onClickTimerOpen() {
   timerModal.style.display = "inherit";
+  document.getElementById("right").style.visibility = 'hidden'; // 반투명 모드에서 할일 목록 감추기
+  document.getElementById("greeting").style.visibility = 'hidden'; // 인사말, 이름 감추기
   onClickTimerReset();
 }
 
@@ -149,6 +151,9 @@ function onClickTimerClose() {
   }
   onClickTimerReset();
   timerBGMoff();
+
+  document.getElementById("right").style.visibility = 'visible'; // 반투명 모드 : 타이머 종료시 할일 목록 표시
+  document.getElementById("greeting").style.visibility = 'visible'; // 인사말, 이름 표시
   timerModal.style.display = "none";
   timesupPopup.style.visibility = "hidden";
 }
