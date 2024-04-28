@@ -879,7 +879,7 @@ body {
     align-items: center;
 }
 
-.chalk-body > textarea {
+.chalk-msg {
     z-index: 20;
     position: absolute;
     display: flex;
@@ -892,7 +892,6 @@ body {
     outline: none;
     text-align: center;
     vertical-align: middle;
-    justify-content: center;
     resize: none;
 }
 
