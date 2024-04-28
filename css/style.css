@@ -227,19 +227,15 @@ body {
     text-align: center;
 }
 
-.login-form input {
-    outline: none;
-    color: white;
-    font-size: 3vw;
-    text-align: center;
-}
-
 .login-name {
     margin: 0 auto;
     border: none;
+    outline: none;
     border-bottom: 2px solid white;
     padding: 10px;
-    font-size: 2vw;
+    font-size: 3vw;
+    color: white;
+    text-align: center;
     background-color: transparent;
 }
 
@@ -249,7 +245,10 @@ body {
 
 .login-submit {
     border: none;
-    font-size: 2vw;
+    outline: none;
+    font-size: 3vw;
+    color: white;
+    text-align: center;
     padding: 10px;
     background-color: transparent;
 }
@@ -958,7 +957,7 @@ body {
 }
 
 
-@media only screen and (max-aspect-ratio: 4/4) and (orientation: portrait) {
+@media only screen and (max-aspect-ratio: 8/9) and (orientation: portrait) {
 /*    html {
         transform: rotate(-90deg);
         transform-origin: top left;
