@@ -9,7 +9,7 @@ const chalkicon = document.createElement('ion-icon');
     chalkicon.setAttribute('name', 'chatbubble-ellipses-outline');
     chalkbody.appendChild(chalkicon);
 
-let prechalkMsgSize = 0;
+let chalkeditflag = true;
 
 chalkmsg.setAttribute('rows', '1');
 
@@ -27,24 +27,21 @@ document.getElementById("chalk-close").addEventListener('click', function() {
     chalkgreeting.style.visibility = "visible";
 });
 
-chalkedit.addEventListener('dblclick', function() {
-    if (chalkmsg.readOnly == true) {
+
+chalkedit.addEventListener('click', function() {
+    if (chalkeditflag == true) {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
         chalkedit.style.opacity = "80%";
         chalkicon.style.display = "none";
-    }
-});
-
-chalkedit.addEventListener('click', function() {
-    chalkmsg.blur();
-});
-
-chalkmsg.addEventListener('blur', function() {
-    this.readOnly = true;
-    chalkedit.style.opacity = "30%";
-    if (this.value == "") {
-        chalkicon.style.display = "inherit";
+        chalkeditflag = false;
+    } else {
+        chalkmsg.readOnly = true;
+        chalkedit.style.opacity = "30%";
+        if (chalkmsg.value == "") {
+            chalkicon.style.display = "inherit";
+        }
+        chalkeditflag = true;
     }
 });
 
