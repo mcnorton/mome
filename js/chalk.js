@@ -2,7 +2,6 @@ const chalk = document.getElementById('chalk');
 const chalkbody = document.getElementById('chalk-body');
 const chalkmsg = document.getElementById('chalk-msg');
 const chalkedit = document.getElementById('chalk-edit');
-const chalkclose = document.getElementById('chalk-close');
 const chalkrightmenu = document.getElementById('right');
 const chalkgreeting = document.getElementById('greeting');
 
@@ -13,6 +12,8 @@ const chalkicon = document.createElement('ion-icon');
 let prechalkMsgSize = 0;
 
 chalkmsg.setAttribute('rows', '1');
+
+window.addEventListener("resize", onChalkBoardResize);
 
 document.getElementById("chalk-open").addEventListener("click", function() {
     chalk.style.display = "inherit";
@@ -26,7 +27,7 @@ document.getElementById("chalk-close").addEventListener('click', function() {
     chalkgreeting.style.visibility = "visible";
 });
 
-document.getElementById('chalk-edit').addEventListener('dblclick', function() {
+chalkedit.addEventListener('dblclick', function() {
     if (chalkmsg.readOnly == true) {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
@@ -35,7 +36,7 @@ document.getElementById('chalk-edit').addEventListener('dblclick', function() {
     }
 });
 
-document.getElementById('chalk-edit').addEventListener('click', function() {
+chalkedit.addEventListener('click', function() {
     chalkmsg.blur();
 });
 
@@ -47,15 +48,18 @@ chalkmsg.addEventListener('blur', function() {
     }
 });
 
-chalkmsg.addEventListener('input', function () {
-    if (Math.floor(chalkmsg.scrollHeight) < Math.floor(chalk.scrollHeight)) {
-        chalkmsg.style.height = "auto";
-        chalkmsg.style.height = chalkmsg.scrollHeight + "px";
-    } else {
-        chalkmsg.style.height = chalk.style.height + "px";
-    }
-});
+chalkmsg.addEventListener('input', onChalkBoardResize);
 
 chalkmsg.addEventListener('onfocus', function() {
     chalkicon.style.display = "none";
 });
+
+function onChalkBoardResize() {
+    chalkmsg.style.height = "auto";
+    if (Math.floor(chalkmsg.scrollHeight) > Math.floor(chalkbody.offsetHeight)) {
+        //chalkmsg.style.height = (chalkbody.offsetHeight) + "px";
+        chalkmsg.style.height = "100%";
+    } else {
+        chalkmsg.style.height = (chalkmsg.scrollHeight) + "px";
+    }
+}

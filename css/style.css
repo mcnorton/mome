@@ -853,7 +853,6 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0,0,0,0.8);
     display: none; 
     text-align: center;
@@ -876,6 +875,7 @@ body {
     font-size: 4vw;
     justify-content: center;
     align-items: center;
+    border: 0;
 }
 
 .chalk-msg {
