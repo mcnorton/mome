@@ -1,12 +1,13 @@
 const chalk = document.getElementById('chalk');
 const chalkbody = document.getElementById('chalk-body');
 const chalkmsg = document.getElementById('chalk-msg');
+const chalkedit = document.getElementById('chalk-edit');
 const chalkclose = document.getElementById('chalk-close');
 const chalkrightmenu = document.getElementById('right');
 const chalkgreeting = document.getElementById('greeting');
 
 const chalkicon = document.createElement('ion-icon');
-    chalkicon.setAttribute('name', 'create-outline');
+    chalkicon.setAttribute('name', 'chatbubble-ellipses-outline');
     chalkbody.appendChild(chalkicon);
 
 let prechalkMsgSize = 0;
@@ -25,13 +26,22 @@ document.getElementById("chalk-close").addEventListener('click', function() {
     chalkgreeting.style.visibility = "visible";
 });
 
-chalkmsg.addEventListener('dblclick', function() {
-    this.readOnly = false;
-    chalkicon.style.display = "none";
+document.getElementById('chalk-edit').addEventListener('dblclick', function() {
+    if (chalkmsg.readOnly == true) {
+        chalkmsg.readOnly = false;
+        chalkmsg.focus();
+        chalkedit.style.opacity = "80%";
+        chalkicon.style.display = "none";
+    }
+});
+
+document.getElementById('chalk-edit').addEventListener('click', function() {
+    chalkmsg.blur();
 });
 
 chalkmsg.addEventListener('blur', function() {
     this.readOnly = true;
+    chalkedit.style.opacity = "30%";
     if (this.value == "") {
         chalkicon.style.display = "inherit";
     }

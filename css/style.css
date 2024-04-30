@@ -894,6 +894,27 @@ body {
     resize: none;
 }
 
+.chalk-edit {
+    position: fixed;
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0px;
+    font-size: 4vw;
+    align-items: center;
+    justify-content: center;
+    z-index: 22;
+    opacity: 30%;
+    color: white;
+    cursor: pointer;
+    bottom: 0px;
+    right: 0px;
+    outline: 0;
+}
+
 .chalk-close {
     position: fixed;
     display: flex; /* 아이콘 정렬 스타일 */
@@ -907,7 +928,7 @@ body {
     align-items: center; /* 세로 중간정렬 */
     justify-content: center; /* 가로 중앙정렬 */
     z-index: 20;
-    opacity: 75%;
+    opacity: 40%;
     color: white;
     cursor: pointer;
     top: 0px;
