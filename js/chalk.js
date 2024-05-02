@@ -35,7 +35,7 @@ chalkedit.addEventListener('click', function() {
     if (chalkeditflag == true) {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
-        chalkedit.style.opacity = "80%";
+        chalkedit.style.opacity = "100%";
         chalkicon.style.display = "none";
         chalkeditflag = false;
     } else {

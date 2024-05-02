@@ -892,6 +892,7 @@ body {
     text-align: center;
     vertical-align: middle;
     resize: none;
+    caret-color: red;
 }
 
 .chalk-edit {
