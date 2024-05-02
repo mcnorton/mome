@@ -22,9 +22,12 @@ document.getElementById("chalk-open").addEventListener("click", function() {
 });
 
 document.getElementById("chalk-close").addEventListener('click', function() {
-    chalk.style.display = "none";
+    if (chalkeditflag == false) {
+        chalkedit.click();
+    }
     chalkrightmenu.style.visibility = "visible";
     chalkgreeting.style.visibility = "visible";
+    chalk.style.display = "none";
 });
 
 
