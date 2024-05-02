@@ -56,8 +56,7 @@ chalkmsg.addEventListener('onfocus', function() {
 
 function onChalkBoardResize() {
     chalkmsg.style.height = "auto";
-    if (Math.floor(chalkmsg.scrollHeight) > Math.floor(chalkbody.offsetHeight)) {
-        //chalkmsg.style.height = (chalkbody.offsetHeight) + "px";
+    if (Math.floor(chalkmsg.scrollHeight) >= Math.floor(chalkbody.offsetHeight)) {
         chalkmsg.style.height = "100%";
     } else {
         chalkmsg.style.height = (chalkmsg.scrollHeight) + "px";
