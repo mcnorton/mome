@@ -11,14 +11,22 @@ const GREETING_CLASSNAME = "greeting";
 const KEY_USERNAME = "username";
 
 const savedUsername = localStorage.getItem(KEY_USERNAME)
+const question = [
+    "What's your name?",
+    "What's your goal for today?"
+];
 
 let t_seq = 0;
 
-if (savedUsername === null) {
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
-} else {
-    printGreeting(savedUsername);
-}
+    if (savedUsername === null) {
+        loginForm.classList.remove(HIDDEN_CLASSNAME);
+    } else {
+        printGreeting(savedUsername);
+    }
+
+    let todayquestion = question[Math.floor(Math.random() * (question.length))];
+    loginInput.placeholder = todayquestion;
+    console.log("Question: " + todayquestion);
 
 loginForm.addEventListener("submit", onLoginSubmit);
 logout.addEventListener ("click", onLogoutSubmit);

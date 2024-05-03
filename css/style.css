@@ -216,7 +216,7 @@ body {
     font-size: 2vw;
     background-color: transparent;
     color: white;
-    opacity: 30%;
+    opacity: 20%;
     border: none;
     cursor: pointer;
 }
@@ -225,6 +225,11 @@ body {
 /* What is your name */
 .login-form {
     text-align: center;
+}
+
+.login-form > input {
+    width: 70%;
+    font-size: 2vw;
 }
 
 .login-name {
@@ -240,7 +245,8 @@ body {
 }
 
 .login-name::placeholder {
-    color: silver;
+    color: gray;
+    size: 2vw;
 }
 
 .login-submit {
