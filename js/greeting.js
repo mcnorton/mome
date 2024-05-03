@@ -43,6 +43,7 @@ function onLoginSubmit(event) {
 
 function onLogoutSubmit(event) {
     event.preventDefault();
+    loginInput.value = "";
     localStorage.removeItem(KEY_USERNAME);
     greeting.classList.remove(GREETING_CLASSNAME);
     greeting.classList.add(HIDDEN_CLASSNAME);
