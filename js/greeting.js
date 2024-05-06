@@ -26,7 +26,7 @@ let t_seq = 0;
 
     let todayquestion = question[Math.floor(Math.random() * (question.length))];
     loginInput.placeholder = todayquestion;
-    console.log("Question: " + todayquestion);
+    // console.log("Question: " + todayquestion);
 
 loginForm.addEventListener("submit", onLoginSubmit);
 logout.addEventListener ("click", onLogoutSubmit);
