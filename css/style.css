@@ -669,7 +669,7 @@ body {
 
 .timer-alarms {
     width: 100%;
-    padding: 1vw;
+    padding: 1vw 0;
     text-align: center;
     border: 0;
 }
