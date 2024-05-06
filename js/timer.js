@@ -6,6 +6,7 @@ const timesupPopup = document.getElementById("timer-timeup-dialog");
 const timesupSound = document.getElementById("timesup-sound");
 const timerBGSound = document.getElementById("timer-bgsound");
 const timerTitle = document.querySelector("#timer-title > input");
+const timerAlarms = document.getElementById("timer-alarms");
 
 const DAY = 24;
 const HUR = 60;
@@ -17,29 +18,31 @@ const PerSec = 0.1; // 1 = 1sec, 0.1 = 1/10 sec
 const OneSec = MIS;
 const GraphFps = PerSec * MIS; // Framerate 10fps (1/10sec) : smoothly
 const KEY_TIMER = "timer"; // Localstorage key name
-const FINISH_SOUND = "snd/epic.mp3"; // FREE BGMusic from Pixabay
+const FINISH_SOUND_PATH = "snd/"; // SOUND PATH, FREE BGMusic from Pixabay
 const BGM_SOUND = "snd/hawaii-five-o.mp3"; // Free BGM : https://archive.org/details/tvtunes_18715
 const DEFAULT_TIME = 10; // (minutes) 기본시간값 10분
+const DEFAULT_SOUND = 1; // Default Sound
 const MAX_TIME = 99; // (minutes) 최대시간값 99분
 
-let savedTime = Math.floor(localStorage.getItem(KEY_TIMER));
+const timesup = [
+  "",
+  "bach.mp3",
+  "goodmorning.mp3",
+  "behappy.mp3",
+  "christmas.mp3",
+  "coffeetime.mp3",
+  "epic.mp3"
+];
+
+let savedTime = DEFAULT_TIME;
 let finishTime = Date.now(); // finish time
-
-if (savedTime === null || savedTime <= 0) {
-  savedTime = DEFAULT_TIME; // 기본값으로 초기화
-  localStorage.setItem(KEY_TIMER, savedTime);
-}
-
-if (savedTime >= MAX_TIME) { // 스토리지에 저장된 시간값이 최대값을 넘어서는지 확인 (예방)
-  savedTime = MAX_TIME; // 저장된 값이 최대시간을 넘는다면, 초기화
-  localStorage.setItem(KEY_TIMER, savedTime); // 스토리지에 재저장
-}
 
 let SetMtime = Math.floor(savedTime); // 분단위로 타이머를 설정합니다.
 let NowSec = 0;
 let CntSec = 0;
 let IntvID = null;
 let defaultTimerTitle = timerTitle.placeholder;
+let setTimerSound = DEFAULT_SOUND;
 
 document.getElementById("timer-open").addEventListener("click", onClickTimerOpen);
 document.querySelector("#timer-timeup-dialog > button").addEventListener("click", onClickTimerReset);
@@ -64,25 +67,66 @@ timerTitle.addEventListener("blur", function() {
   }
 });
 
-timesupSound.src = FINISH_SOUND;
-timerBGSound.src = BGM_SOUND;
-
+// getSavedTimeData();
 drawTimer();
 
+// timesup[] 갯수만큼 * 표시 버튼을 생성합니다
+timesup.forEach(timesupButton);
+
+function timesupButton(sndList) {
+  const button = document.createElement("button");
+  const span = document.createElement("span");
+  const ionicon = document.createElement("ion-icon");
+
+  if (sndList == "") {
+    ionicon.setAttribute("name", "volume-mute");
+    button.classList.add("timer-alarm-mute");
+  } else {
+    ionicon.setAttribute("name", "ellipse");
+    button.classList.add("timer-alarm");
+  }
+
+  button.value = timesup.indexOf(sndList);
+  button.addEventListener("click", timesupSoundChange);
+
+  span.appendChild(ionicon);
+  button.appendChild(span);
+  timerAlarms.appendChild(button);
+}
+
 function timesupSoundOff() {
-  timesupSound.pause();
-  timesupSound.currentTime = 0;
+  if (timesupSound.paused == false) {
+    timesupSound.pause();
+    timesupSound.currentTime = 0;
+  }
 }
 
 function timesupSoundOn() {
-  timesupSound.currentTime = 0;
-  timesupSound.play();
+  if (setTimerSound != 0) {
+    timesupSound.currentTime = 0;
+    timesupSound.play();
+    setTimeout(timesupSoundOff, 60000);
+  }
+}
+
+function timesupSoundChange(event) {
+  const clickButton = event.target;
+
+  setTimerSound = Math.floor(clickButton.value);
+  
+  if (setTimerSound != 0) { // 0 = Mute
+    timesupSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
+    timesupSound.currentTime = 0;
+    timesupSound.play();
+    setTimeout(timesupSoundOff, 2000);
+  }
 }
 
 function onClickTimerOpen() {
   timerModal.style.display = "inherit";
   document.getElementById("right").style.visibility = 'hidden'; // 반투명 모드에서 할일 목록 감추기
   document.getElementById("greeting").style.visibility = 'hidden'; // 인사말, 이름 감추기
+  getSavedTimeData();
   onClickTimerReset();
 }
 
@@ -114,7 +158,7 @@ function onClickTimerReset() {
   timesupPopup.style.visibility = "hidden";
 
   document.querySelector("#timer-pause > ion-icon").name = "play";
-  SetMtime = Math.floor(localStorage.getItem(KEY_TIMER));
+  SetMtime = savedTime;
   NowSec = 0;
   CntSec = 0;
 
@@ -140,15 +184,18 @@ function onClickTimerPause() {
       IntvID = setTimeout(runTimer, GraphFps);
     }, 0);*/
   }
+  setLocalTimer(SetMtime); // save Timer data
 }
 
 
 function onClickTimerClose() {
+
   if (IntvID !== null) {
     clearInterval(IntvID);
     //clearTimeout(IntvID);
     IntvID = null;
   }
+  setLocalTimer(SetMtime); // save Timer data
   onClickTimerReset();
   timerBGMoff();
 
@@ -166,7 +213,6 @@ function onClickTimerCtrlP1() {
   if (SetMtime < (100 - t)) { // 99분까지 시간 추가 
     SetMtime = Math.floor(SetMtime) + Math.floor(t);
   }
-  setLocalTimer(SetMtime);
 
   drawTimer();
   NowSec = n;
@@ -179,7 +225,6 @@ function onClickTimerCtrlM1() {
   if ((SetMtime - t) > 0) { // 남은 시간이 1분 보다 클 때만 시간을 줄임
     SetMtime = SetMtime - Math.floor(t);
   }
-  setLocalTimer(SetMtime);
 
   drawTimer();
   NowSec = n;
@@ -192,7 +237,6 @@ function onClickTimerCtrlP5() {
   if (SetMtime < (100 - t)) {
     SetMtime = SetMtime + Math.floor(t);
   }
-  setLocalTimer(SetMtime);
 
   drawTimer();
   NowSec = n;
@@ -205,7 +249,6 @@ function onClickTimerCtrlM5() {
   if (SetMtime > (t + 1) ) { // 6분 보다 클 때
     SetMtime = SetMtime - Math.floor(t);
   }
-  setLocalTimer(SetMtime);
 
   drawTimer();
   NowSec = n;
@@ -213,10 +256,6 @@ function onClickTimerCtrlM5() {
 
 function drawTimer() {
   let s = Math.floor(SetMtime); // 세팅된 시간의 처음 값을 기억해 둡니다.
-
-    if (SetMtime != s) { // 만약에 처음 설정된 시간 값이 변경된다면, 로컬스토리지의 마지막 시간을 저장합니다.
-      setLocalTimer(SetMtime);
-    }
 
     CntSec = (SetMtime * 60 * 10) - NowSec;
     timerDisplay.innerHTML = secToTime(CntSec);
@@ -250,11 +289,15 @@ function secToTime(s) {
 
 
 function setLocalTimer(s) {
-  const sm = Math.floor(s);
+  const setTime = Math.floor(s);
 
-  if (sm != savedTime) {
-    localStorage.setItem(KEY_TIMER, sm);
-  }
+  const objTimer = {
+    time: setTime,
+    sound: setTimerSound,
+  };
+
+  localStorage.setItem(KEY_TIMER, JSON.stringify(objTimer));
+
 }
 
 
@@ -266,3 +309,31 @@ function openTimesUp() {
   timesupPopup.style.visibility = "visible";
 }
 
+
+function getSavedTimeData() {
+  let gt = localStorage.getItem(KEY_TIMER);
+
+  if (gt === null) {
+      savedTime = DEFAULT_TIME;
+      setTimerSound = DEFAULT_SOUND;
+      timesupSound.src = FINISH_SOUND_PATH + timesup[0];
+      timerBGSound.src = BGM_SOUND;
+
+    } else {
+      let savedata = JSON.parse(gt);
+
+      savedTime = Math.floor(savedata.time);
+      if ((savedTime <= 0) || (savedTime > MAX_TIME)) {
+        savedTime = DEFAULT_TIME;
+      }
+      setTimerSound = savedata.sound;
+      if (setTimerSound > (timesup.length - 1)) {
+        setTimerSound = DEFAULT_SOUND;
+      }
+
+      // console.log(setTimerSound, timesup.length);
+      
+      timesupSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
+      timerBGSound.src = BGM_SOUND;
+    }
+}

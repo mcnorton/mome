@@ -111,7 +111,7 @@ body {
     margin-bottom: 3vh;
 }
 
-.bglist button {
+.bglist > button {
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
@@ -543,7 +543,7 @@ body {
     border-radius: 20px;
 }
 
-.timer-title input {
+.timer-title > input {
     width: 100%;
     height: 3vw;
     margin-bottom: 1vw;
@@ -665,6 +665,38 @@ body {
     font-size: 8vw;
     line-height: 80%;
     cursor: pointer;
+}
+
+.timer-alarms {
+    width: 100%;
+    padding: 1vw;
+    text-align: center;
+    border: 0;
+}
+
+.timer-alarms > button {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 40%;
+    border: 0;
+    outline: none;
+}
+
+.timer-alarms > button > span {
+    pointer-events: none;
+}
+
+.timer-alarm {
+    font-size: 1vw;
+    color: gray;
+}
+
+.timer-alarm-mute {
+    font-size: 1.5vw;
+    color: black;
 }
 
 
