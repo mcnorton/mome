@@ -158,10 +158,11 @@ function onClickTimerReset() {
   timesupPopup.style.visibility = "hidden";
 
   document.querySelector("#timer-pause > ion-icon").name = "play";
-  SetMtime = savedTime;
+  // SetMtime = savedTime;
   NowSec = 0;
   CntSec = 0;
 
+  setLocalTimer(SetMtime); // save Timer data
   drawTimer();
 }
 
