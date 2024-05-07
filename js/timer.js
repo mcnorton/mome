@@ -26,8 +26,8 @@ const MAX_TIME = 99; // (minutes) 최대시간값 99분
 
 const timesup = [
   "",
-  "bach.mp3",
   "goodmorning.mp3",
+  "bach.mp3",
   "behappy.mp3",
   "christmas.mp3",
   "coffeetime.mp3",
