@@ -67,7 +67,7 @@ timerTitle.addEventListener("blur", function() {
   }
 });
 
-// getSavedTimeData();
+getSavedTimeData();
 drawTimer();
 
 // timesup[] 갯수만큼 * 표시 버튼을 생성합니다
