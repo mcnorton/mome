@@ -19,6 +19,7 @@ document.getElementById("chalk-open").addEventListener("click", function() {
     chalk.style.display = "inherit";
     chalkrightmenu.style.visibility = "hidden";
     chalkgreeting.style.visibility = "hidden";
+    onChalkBoardResize();
 });
 
 document.getElementById("chalk-close").addEventListener('click', function() {
