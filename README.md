@@ -15,8 +15,8 @@
 
 
 ![momemo](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)
-
-
+   
+   
 
 ## Feature
 * 웹폰트를 적용하여 가독성을 높임
@@ -109,3 +109,5 @@
 ## Special Thanks!
 * Nomardcoder (Vanilla JS Course) - https://nomadcoders.co/
 * Pixabay - https://pixabay.com/
+* Internet Archive - https://archive.org/
+
