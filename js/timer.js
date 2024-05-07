@@ -316,7 +316,7 @@ function getSavedTimeData() {
   if (gt === null) {
       savedTime = DEFAULT_TIME;
       setTimerSound = DEFAULT_SOUND;
-      timesupSound.src = FINISH_SOUND_PATH + timesup[0];
+      timesupSound.src = FINISH_SOUND_PATH + timesup[1];
       timerBGSound.src = BGM_SOUND;
 
     } else {
