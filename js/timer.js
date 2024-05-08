@@ -313,29 +313,35 @@ function openTimesUp() {
 
 
 function getSavedTimeData() {
+  // Get timer data
   let gt = localStorage.getItem(KEY_TIMER);
 
   if (gt === null) {
+
       savedTime = DEFAULT_TIME;
       setTimerSound = DEFAULT_SOUND;
       timesupSound.src = FINISH_SOUND_PATH + timesup[1];
       timerBGSound.src = BGM_SOUND;
 
     } else {
+
       let savedata = JSON.parse(gt);
 
       savedTime = Math.floor(savedata.time);
+      setTimerSound = savedata.sound;
+
+      // Check saved time
       if ((savedTime <= 0) || (savedTime > MAX_TIME)) {
         savedTime = DEFAULT_TIME;
       }
-      setTimerSound = savedata.sound;
+      // Check saved timer sound
       if (setTimerSound > (timesup.length - 1)) {
         setTimerSound = DEFAULT_SOUND;
       }
 
-      // console.log(setTimerSound, timesup.length);
-      
       timesupSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
       timerBGSound.src = BGM_SOUND;
     }
+
+  SetMtime = savedTime; // Timer reset = saved time
 }
