@@ -31,16 +31,17 @@ const images = [
 // Spring
 const images = [
     "",
-    "treebirds.jpg",
-    "seedlings.jpg",
-    "wooden.jpg",
+    "aigrass.jpg",
     "spring.jpg",
     "buttercups.jpg",
-    "cherry-blossoms.jpg",
     "tulips_y.jpg",
     "tulips_w.jpg",
-    "springcb.jpg",
-    "enjoy.jpg"
+    "enjoy.jpg",
+    "gwanghwa.jpg",
+    "dokdo.jpg",
+    "lantern.jpg",
+    "camera.jpg",
+    "geo.png"
 ]
 
 
