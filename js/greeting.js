@@ -12,8 +12,9 @@ const KEY_USERNAME = "username";
 
 const savedUsername = localStorage.getItem(KEY_USERNAME)
 const question = [
-    "What's your name?",
-    "What's your goal for today?"
+    "What is your name?",
+    "What is your goal for today?",
+    "How is the weather?"
 ];
 
 let t_seq = 0;
