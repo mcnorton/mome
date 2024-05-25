@@ -1,10 +1,22 @@
-const inforeadme = document.getElementById("readme");
-const inforeload = document.getElementById("reload");
+const readme = document.getElementById("readme");
+const lovely = document.getElementById("lovely");
+const lovelysong = new Audio("snd/macgyver1985.mp3");
 
-inforeadme.addEventListener("click", function() {
-    window.open("https://github.com/mcnorton/mome/blob/master/README.md", "mome_info");
+lovelysong.loop = false;
+
+readme.addEventListener("click", function() {
+    window.open("https://github.com/mcnorton/mome/blob/master/README.md", "momemo_readme");
 });
 
-inforeload.addEventListener("click", function() { 
-    location.reload(true);
+lovely.addEventListener("click", function() {
+    lovelysong.play();
+});
+
+lovely.addEventListener("blur", function() {
+    lovelysong.pause();
+});
+
+lovely.addEventListener("dblclick", function() {
+    lovelysong.currentTime = 0;
+    lovelysong.play();
 });

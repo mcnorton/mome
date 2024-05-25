@@ -71,18 +71,13 @@ body {
 }
 
 .info button {
-    opacity: 60%;
+    opacity: 20%;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     margin-top: 0.5vw;
     margin-left: 0.5vw;
-}
-
-.readme,
-.reload {
-    opacity: 30% !important;
     margin-right: 0;
     line-height: 0%;
     font-size: 2vw;
@@ -363,7 +358,7 @@ body {
     vertical-align: middle;
     border: none;
     background: transparent;
-    opacity: 30%;
+    opacity: 50%;
     cursor: pointer;
     outline: none;
 }
