@@ -31,8 +31,8 @@
     <!-- Left : Clock -->
     <div class="left">
       <div id="info" class="info">
-        <button id="lovely" class="lovely"><ion-icon name="heart-outline"></ion-icon></button>
-        <button id="readme" class="readme"><ion-icon name="help-circle-outline"></ion-icon></button>
+        <button id="lovely" class="lovely" title="MACNORTON"><ion-icon name="heart-outline"></ion-icon></button>
+        <button id="readme" class="readme" title="READ ME"><ion-icon name="help-circle-outline"></ion-icon></button>
       </div>
       <div id="clockbelt" class="clockbelt">
         <div id="bglist" class="bglist">
@@ -52,7 +52,7 @@
         <div id="greeting" class="hidden">
             <h4></h4>
             <h3></h3>
-            <button><ion-icon name="refresh-circle-outline"></ion-icon></button>
+            <button title="EDIT"><ion-icon name="refresh-circle-outline"></ion-icon></button>
         </div>
       </div>
       <div id="analogclock" class="analogclock" hidden>
@@ -64,9 +64,9 @@
       <div class="leftbottom">
         <!-- Tool Belt -->
         <div id="toolbelt" class="toolbelt">
-          <button id="timer-open"><ion-icon name="hourglass-outline"></ion-icon></button>
-          <button id="score-open"><ion-icon name="game-controller-outline"></ion-icon></button>
-          <button id="chalk-open"><ion-icon name="create-outline"></ion-icon></button>
+          <button id="timer-open" title="PIE TIMER"><ion-icon name="hourglass-outline"></ion-icon></button>
+          <button id="score-open" title="SCORE BOARD"><ion-icon name="game-controller-outline"></ion-icon></button>
+          <button id="chalk-open" title="CHALK BOARD"><ion-icon name="create-outline"></ion-icon></button>
         </div>
 
         <div id="quote" class="quote">
@@ -87,7 +87,7 @@
         <ul id="todo-list" class="todo-list"></ul>
       </div>
       <div id="screen" class="screen">
-        <button></button>
+        <button title="FULLSCREEN MODE"></button>
       </div>
     </div>
 
@@ -95,7 +95,7 @@
     <div id="timer-modal" class="timer-modal">
       <div class="timer-body">
         <div class="timer-close">
-          <button id="timer-close-button">
+          <button id="timer-close-button" title="CLOSE">
             <span><ion-icon name="close-circle-outline"></ion-icon></span>
           </button>
         </div>
@@ -110,30 +110,30 @@
           </div>
         </div>
         <div id="timer-control" class="timer-control">
-          <button id="timer-reset" class="timer-reset">
+          <button id="timer-reset" class="timer-reset" title="RESET">
             <ion-icon name="refresh"></ion-icon>
           </button>
-          <button id="timer-5min-plus">
+          <button id="timer-5min-plus" title="+ 5">
             <ion-icon name="add-circle-outline"></ion-icon>
           </button>
-          <button id="timer-1min-plus">
+          <button id="timer-1min-plus" title="- 1">
             <ion-icon name="add"></ion-icon>
           </button>
-          <button id="timer-pause" class="timer-pause">
+          <button id="timer-pause" class="timer-pause" title="START/PAUSE">
             <ion-icon name="play"></ion-icon>
           </button>
-          <button id="timer-1min-minus">
+          <button id="timer-1min-minus" title="- 1">
             <ion-icon name="remove"></ion-icon>
           </button>
-          <button id="timer-5min-minus">
+          <button id="timer-5min-minus" title="- 5">
             <ion-icon name="remove-circle-outline"></ion-icon>
           </button>
-          <button id="timer-bgm">
+          <button id="timer-bgm" title="BGM">
             <ion-icon name="radio-outline"></ion-icon>
           </button>
         </div>
         <div id="timer-timeup-dialog" class="timer-timeup-dialog">
-          <button><ion-icon name="notifications"></ion-icon></button>
+          <button title="CLOSE"><ion-icon name="notifications"></ion-icon></button>
           <audio id="timesup-sound"></audio>
           <audio id="timer-bgsound" loop="loop"></audio>
         </div>
@@ -144,10 +144,10 @@
     <div id="score" class="score">
       <div class="score-body">
         <div>
-          <button id="sbreset" class="sbreset"><ion-icon name="refresh-circle-outline"></ion-icon></button>
-          <button id="sbclose" class="sbclose"><ion-icon name="close-circle-outline"></ion-icon></button>
-          <button id="sbchange" class="sbchange"><ion-icon name="shuffle-outline"></ion-icon></button>
-          <button id="sbwhistle" class="sbwhistle"><ion-icon name="volume-medium-outline"></ion-icon></button>
+          <button id="sbreset" class="sbreset" title="RESET (Double Click)"><ion-icon name="refresh-circle-outline"></ion-icon></button>
+          <button id="sbclose" class="sbclose" title="CLOSE"><ion-icon name="close-circle-outline"></ion-icon></button>
+          <button id="sbchange" class="sbchange" title="COURT CHANGE"><ion-icon name="shuffle-outline"></ion-icon></button>
+          <button id="sbwhistle" class="sbwhistle" title="WHISTLE"><ion-icon name="volume-medium-outline"></ion-icon></button>
         </div>
         <div id="teamblack" class="teamblack">
           <button id="tbup" class="tbup"></button>
@@ -167,8 +167,8 @@
     <!-- Chalk Board -->
     <div id="chalk" class="chalk">
       <div id="chalk-title" class="chalk-title">
-        <button id="chalk-edit" class="chalk-edit"><ion-icon name="create-outline"></ion-icon></button>
-        <button id="chalk-close" class="chalk-close"><ion-icon name="close-circle-outline"></ion-icon></button>
+        <button id="chalk-edit" class="chalk-edit" title="EDIT"><ion-icon name="create-outline"></ion-icon></button>
+        <button id="chalk-close" class="chalk-close" title="CLOSE"><ion-icon name="close-circle-outline"></ion-icon></button>
       </div>
       <div id="chalk-body" class="chalk-body">
         <textarea id="chalk-msg" class="chalk-msg" readonly></textarea>

@@ -16,7 +16,6 @@
     font-family: 'Gowun Dodum', sans-serif;
 }
 
-
 body {
     color: white;
     overflow: hidden;
@@ -30,6 +29,12 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+ion-icon {
+    pointer-events: none;
+}
+
+
 
 
 /* Slowhide, Hide Effect */

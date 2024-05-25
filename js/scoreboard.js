@@ -16,7 +16,7 @@ let defTwTitle = twtitle.placeholder;
 const SCOREBOARD_SOUND = "snd/whistle.mp3";
 teamblack.style.left = "0px";
 teamwhite.style.right = "0px";
-document.getElementById("sbreset").setAttribute("title", "** Double Click");
+// document.getElementById("sbreset").setAttribute("title", "** Double Click");
 
 // #define Sound obj.
 let referee = new Audio(SCOREBOARD_SOUND);
