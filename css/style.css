@@ -322,7 +322,8 @@ ion-icon {
     padding: 2.5vh 2vw 1vh 2vw;
     list-style: none;
     text-indent: -2vw;
-    text-decoration-color: red;
+    text-decoration-color: black;
+    text-decoration-thickness: 0.3rem;
 }
 
 .todo-list button {
@@ -332,7 +333,7 @@ ion-icon {
     border: 0.2vw solid #ffffff99;
     border-radius: 0.5vw;
     font-size: 3vw;
-    color: red;
+    color: limegreen;
     width: 2vw;
     height: 2vw;
     margin-right: 1vw;

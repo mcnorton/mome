@@ -63,6 +63,10 @@ function deleteToDo(event) {
     span.appendChild(ionicon);
     button.appendChild(span);
     li.classList.add(SLOWHIDE_CLASSNAME);
+
+    button.style.cursor ="not-allowed";
+    button.disabled = true;
+
     setTimeout(function() { li.remove(); }, 30000);
 
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
