@@ -7,6 +7,7 @@ const timesupSound = document.getElementById("timesup-sound");
 const timerBGSound = document.getElementById("timer-bgsound");
 const timerTitle = document.querySelector("#timer-title > input");
 const timerAlarms = document.getElementById("timer-alarms");
+const timerControl = document.querySelectorAll("#timer-control > button");
 
 const DAY = 24;
 const HUR = 60;
@@ -68,10 +69,11 @@ timerTitle.addEventListener("blur", function() {
   }
 });
 
+timerControlOn();
 getSavedTimeData();
 drawTimer();
 
-// timesup[] 갯수만큼 * 표시 버튼을 생성합니다
+// timesup[] Alarm Sound 갯수만큼 * 표시 버튼을 생성합니다
 timesup.forEach(timesupButton);
 
 function timesupButton(sndList) {
@@ -94,6 +96,7 @@ function timesupButton(sndList) {
   button.appendChild(span);
   timerAlarms.appendChild(button);
 }
+//////////////////////////
 
 function timesupSoundOff() {
   if (timesupSound.paused == false) {
@@ -153,16 +156,17 @@ function onClickTimerReset() {
     clearTimeout(IntvID);
     IntvID = null;
   }
-  
-  timesupSoundOff();
-  timerBGMoff();
-  timesupPopup.style.visibility = "hidden";
 
   document.querySelector("#timer-pause > ion-icon").name = "play";
   // SetMtime = savedTime;
   NowSec = 0;
   CntSec = 0;
 
+  timesupSoundOff();
+  timerBGMoff();
+  timesupPopup.style.visibility = "hidden";
+
+  timerControlOn();
   setLocalTimer(SetMtime); // save Timer data
   drawTimer();
 }
@@ -275,7 +279,7 @@ function drawTimer() {
 
     if (CntSec <= 0) { 
       clearInterval(IntvID);
-      // clearTimeout(IntvID);
+        // clearTimeout(IntvID);
       openTimesUp();
     } else {
       NowSec++;
@@ -302,10 +306,11 @@ function setLocalTimer(s) {
 
 }
 
-
+//////////// Time's Up alarm /////////////////////
 function openTimesUp() {
   timerBGMoff();
   timesupSoundOn();
+  timerControlOff();
   timerGraph.style.background = "conic-gradient(#eeeeee 100%, white 100%)";
   timerDisplay.innerHTML = secToTime(SetMtime * 60 * 10);
   timesupPopup.style.visibility = "visible";
@@ -344,4 +349,16 @@ function getSavedTimeData() {
     }
 
   SetMtime = savedTime; // Timer reset = saved time
+}
+
+function timerControlOn() {
+  for (let l = 1; l < timerControl.length; l++) {
+    timerControl[l].style.visibility = "visible";
+  }
+}
+
+function timerControlOff() {
+  for (let l = 1; l < timerControl.length; l++) {
+    timerControl[l].style.visibility = "hidden";
+  }
 }
