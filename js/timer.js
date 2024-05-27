@@ -28,12 +28,18 @@ const MAX_TIME = 99; // (minutes) 최대시간값 99분
 const timesup = [
   "",
   "goodmorning.mp3",
+  "clockalarm.mp3",
+  "cuckoo12.mp3",
   "befunny.mp3",
   "bach.mp3",
   "behappy.mp3",
   "christmas.mp3",
   "coffeetime.mp3",
-  "epic.mp3"
+  "battleship1.mp3",
+  "epic.mp3",
+  "success.mp3",
+  "bingbong.mp3",
+  "attention.mp3"
 ];
 
 let savedTime = DEFAULT_TIME;
