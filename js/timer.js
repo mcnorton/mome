@@ -91,6 +91,10 @@ function timesupButton(sndList) {
 
   button.value = timesup.indexOf(sndList);
   button.addEventListener("click", timesupSoundChange);
+  button.addEventListener("blur", function() {
+    timesupSound.currentTime = 0;
+    timesupSound.pause();
+  });
 
   span.appendChild(ionicon);
   button.appendChild(span);
@@ -122,7 +126,7 @@ function timesupSoundChange(event) {
     timesupSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
     timesupSound.currentTime = 0;
     timesupSound.play();
-    setTimeout(timesupSoundOff, 2000);
+    setTimeout(timesupSoundOff, 60000);
   }
 }
 
