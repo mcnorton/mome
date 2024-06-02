@@ -95,14 +95,15 @@ ion-icon {
 
 
 /* PWA Install */
-.install {
-    margin-left: 0px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 2px 15px;
-    background-color: #000000;
+#install {
+    width: auto;
+    border: 2px solid #ffffff99;
+    border-radius: 8px;
+    padding: 3px 15px;
+    background-color: black;
     color: white;
-    font-size: 1vw;
+    font-size: 0.8em;
+    opacity: 80%;
 }
 
 
