@@ -48,7 +48,7 @@ function createInstallButton() {
     const button = document.createElement("button");
     const ionicon = document.createElement("ion-icon");
 
-    button.innerHTML = "INSTALL Desktop App ";
+    button.innerHTML = "INSTALL";
     button.className = "install";
     button.id = "install";
 

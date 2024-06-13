@@ -16,7 +16,6 @@
     font-family: 'Gowun Dodum', sans-serif;
 }
 
-
 body {
     color: white;
     overflow: hidden;
@@ -30,6 +29,12 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+ion-icon {
+    pointer-events: none;
+}
+
+
 
 
 /* Slowhide, Hide Effect */
@@ -71,18 +76,13 @@ body {
 }
 
 .info button {
-    opacity: 60%;
+    opacity: 20%;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     margin-top: 0.5vw;
     margin-left: 0.5vw;
-}
-
-.readme,
-.reload {
-    opacity: 30% !important;
     margin-right: 0;
     line-height: 0%;
     font-size: 2vw;
@@ -95,14 +95,15 @@ body {
 
 
 /* PWA Install */
-.install {
-    margin-left: 0px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 2px 15px;
-    background-color: #000000;
+#install {
+    width: auto;
+    border: 2px solid #ffffff99;
+    border-radius: 8px;
+    padding: 3px 15px;
+    background-color: black;
     color: white;
-    font-size: 1vw;
+    font-size: 0.8em;
+    opacity: 80%;
 }
 
 
@@ -322,17 +323,18 @@ body {
     padding: 2.5vh 2vw 1vh 2vw;
     list-style: none;
     text-indent: -2vw;
-    text-decoration-color: red;
+    text-decoration-color: #00000077;
+    text-decoration-thickness: 0.3rem;
 }
 
 .todo-list button {
     text-align: center;
     vertical-align: middle;
     background-color: transparent;
-    border: 0.2vw solid white;
+    border: 0.2vw solid #ffffff99;
     border-radius: 0.5vw;
     font-size: 3vw;
-    color: red;
+    color: lime;
     width: 2vw;
     height: 2vw;
     margin-right: 1vw;
@@ -363,7 +365,7 @@ body {
     vertical-align: middle;
     border: none;
     background: transparent;
-    opacity: 30%;
+    opacity: 50%;
     cursor: pointer;
     outline: none;
 }

@@ -3,10 +3,9 @@ const timerGraph = document.getElementById("timer-circle");
 const timerDisplay = document.querySelector("#timer-time > span");
 const timerClose = document.getElementById("timer-close-button");
 const timesupPopup = document.getElementById("timer-timeup-dialog");
-const timesupSound = document.getElementById("timesup-sound");
-const timerBGSound = document.getElementById("timer-bgsound");
 const timerTitle = document.querySelector("#timer-title > input");
 const timerAlarms = document.getElementById("timer-alarms");
+const timerControl = document.querySelectorAll("#timer-control > button");
 
 const DAY = 24;
 const HUR = 60;
@@ -21,18 +20,24 @@ const KEY_TIMER = "timer"; // Localstorage key name
 const FINISH_SOUND_PATH = "snd/"; // SOUND PATH, FREE BGMusic from Pixabay
 const BGM_SOUND = "snd/hawaii-five-o.mp3"; // Free BGM : https://archive.org/details/tvtunes_18715
 const DEFAULT_TIME = 10; // (minutes) 기본시간값 10분
-const DEFAULT_SOUND = 1; // Default Sound
+const DEFAULT_SOUND = 1; // Default Sound. 0 = Mute
 const MAX_TIME = 99; // (minutes) 최대시간값 99분
 
 const timesup = [
   "",
   "goodmorning.mp3",
+  "clockalarm.mp3",
+  "cuckoo12.mp3",
   "befunny.mp3",
   "bach.mp3",
   "behappy.mp3",
   "christmas.mp3",
   "coffeetime.mp3",
-  "epic.mp3"
+  "battleship1.mp3",
+  "epic.mp3",
+  "success.mp3",
+  "bingbong.mp3",
+  "attention.mp3"
 ];
 
 let savedTime = DEFAULT_TIME;
@@ -44,6 +49,12 @@ let CntSec = 0;
 let IntvID = null;
 let defaultTimerTitle = timerTitle.placeholder;
 let setTimerSound = DEFAULT_SOUND;
+let timerSound = new Audio(FINISH_SOUND_PATH + timesup[setTimerSound]);
+// const timerBGSound = document.getElementById("timer-bgsound");
+let timerBGSound = new Audio(BGM_SOUND);
+// const timesupSound = document.getElementById("timesup-sound");
+let timesupSound = new Audio(FINISH_SOUND_PATH + timesup[setTimerSound]);
+let timerSoundTimeout = null;
 
 document.getElementById("timer-open").addEventListener("click", onClickTimerOpen);
 document.querySelector("#timer-timeup-dialog > button").addEventListener("click", onClickTimerReset);
@@ -68,10 +79,11 @@ timerTitle.addEventListener("blur", function() {
   }
 });
 
+timerControlOn();
 getSavedTimeData();
 drawTimer();
 
-// timesup[] 갯수만큼 * 표시 버튼을 생성합니다
+// timesup[] Alarm Sound 갯수만큼 * 표시 버튼을 생성합니다
 timesup.forEach(timesupButton);
 
 function timesupButton(sndList) {
@@ -89,24 +101,35 @@ function timesupButton(sndList) {
 
   button.value = timesup.indexOf(sndList);
   button.addEventListener("click", timesupSoundChange);
+  button.addEventListener("blur", function() {
+    if (timerSoundTimeout !== null) {
+      clearTimeout(timerSoundTimeout);
+      timerSound.currentTime = 0;
+      timerSound.pause();
+    };
+  });
 
   span.appendChild(ionicon);
   button.appendChild(span);
   timerAlarms.appendChild(button);
 }
+//////////////////////////
 
 function timesupSoundOff() {
-  if (timesupSound.paused == false) {
-    timesupSound.pause();
-    timesupSound.currentTime = 0;
+  timerSound.pause();
+  timerSound.currentTime = 0;
+  if (timerSoundTimeout !== null) {
+    clearTimeout(timerSoundTimeout);
   }
 }
 
 function timesupSoundOn() {
+  timesupSoundOff();
+
   if (setTimerSound != 0) {
-    timesupSound.currentTime = 0;
-    timesupSound.play();
-    setTimeout(timesupSoundOff, 60000);
+    timerSound.currentTime = 0;
+    timerSound.play();
+    timerSoundTimeout = setTimeout(timesupSoundOff, 60000);
   }
 }
 
@@ -116,10 +139,13 @@ function timesupSoundChange(event) {
   setTimerSound = Math.floor(clickButton.value);
   
   if (setTimerSound != 0) { // 0 = Mute
-    timesupSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
-    timesupSound.currentTime = 0;
-    timesupSound.play();
-    setTimeout(timesupSoundOff, 2000);
+    timerSound.src = FINISH_SOUND_PATH + timesup[setTimerSound];
+    timerSound.currentTime = 0;
+    timerSound.play();
+    timerSoundTimeout = setTimeout(function() {
+      timerSound.pause(); 
+      timerSound.currentTime = 0;
+    }, 60000);
   }
 }
 
@@ -153,16 +179,17 @@ function onClickTimerReset() {
     clearTimeout(IntvID);
     IntvID = null;
   }
-  
-  timesupSoundOff();
-  timerBGMoff();
-  timesupPopup.style.visibility = "hidden";
 
   document.querySelector("#timer-pause > ion-icon").name = "play";
   // SetMtime = savedTime;
   NowSec = 0;
   CntSec = 0;
 
+  timesupSoundOff();
+  timerBGMoff();
+  timesupPopup.style.visibility = "hidden";
+
+  timerControlOn();
   setLocalTimer(SetMtime); // save Timer data
   drawTimer();
 }
@@ -275,7 +302,7 @@ function drawTimer() {
 
     if (CntSec <= 0) { 
       clearInterval(IntvID);
-      // clearTimeout(IntvID);
+        // clearTimeout(IntvID);
       openTimesUp();
     } else {
       NowSec++;
@@ -302,10 +329,11 @@ function setLocalTimer(s) {
 
 }
 
-
+//////////// Time's Up alarm /////////////////////
 function openTimesUp() {
   timerBGMoff();
   timesupSoundOn();
+  timerControlOff();
   timerGraph.style.background = "conic-gradient(#eeeeee 100%, white 100%)";
   timerDisplay.innerHTML = secToTime(SetMtime * 60 * 10);
   timesupPopup.style.visibility = "visible";
@@ -344,4 +372,16 @@ function getSavedTimeData() {
     }
 
   SetMtime = savedTime; // Timer reset = saved time
+}
+
+function timerControlOn() {
+  for (let l = 1; l < timerControl.length; l++) {
+    timerControl[l].style.visibility = "visible";
+  }
+}
+
+function timerControlOff() {
+  for (let l = 1; l < timerControl.length; l++) {
+    timerControl[l].style.visibility = "hidden";
+  }
 }
