@@ -147,6 +147,7 @@ function timesupSoundChange(event) {
       timerSound.currentTime = 0;
     }, 60000);
   }
+  setLocalTimer(SetMtime); // save Timer data
 }
 
 function onClickTimerOpen() {
