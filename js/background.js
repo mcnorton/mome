@@ -32,7 +32,6 @@ const images = [
 const images = [
     "",
     "wallpaper.jpg",
-    "books.jpg",
     "ailib.jpg",
     "aigrass.jpg",
     "ocean.jpg",
