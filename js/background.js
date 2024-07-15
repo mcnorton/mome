@@ -31,7 +31,8 @@ const images = [
 // Spring
 const images = [
     "",
-    "wallpaper.jpg",
+    "bread.jpg",
+    "tomato.jpg",
     "ailib.jpg",
     "aigrass.jpg",
     "ocean.jpg",
