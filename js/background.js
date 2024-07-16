@@ -40,11 +40,11 @@ const images = [
     "tulips_y.jpg",
     "tulips_w.jpg",
     "enjoy.jpg",
-    "nature.jpg",
-    "field.jpg",
     "geo.png",
     "bokeh.jpg",
-    "dokdo.jpg"
+    "dokdo.jpg",
+    "sailing.jpg",
+    "cockpit.jpg"
 ]
 
 
