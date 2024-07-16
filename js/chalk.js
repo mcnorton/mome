@@ -5,9 +5,12 @@ const chalkedit = document.getElementById('chalk-edit');
 const chalkrightmenu = document.getElementById('right');
 const chalkgreeting = document.getElementById('greeting');
 
+/* 초크보드 중간에 버블 아이콘인데, 쓸모가 없어졌으나 참조코드로 남겨둠.
 const chalkicon = document.createElement('ion-icon');
     chalkicon.setAttribute('name', 'chatbubble-ellipses-outline');
     chalkbody.appendChild(chalkicon);
+    chalkicon.style.visibility = "hidden";
+*/
 
 let chalkeditflag = true;
 
@@ -20,6 +23,10 @@ document.getElementById("chalk-open").addEventListener("click", function() {
     chalkrightmenu.style.visibility = "hidden";
     chalkgreeting.style.visibility = "hidden";
     onChalkBoardResize();
+
+    if (chalkmsg.value == "") {
+        chalkedit.click();
+    }
 });
 
 document.getElementById("chalk-close").addEventListener('click', function() {
@@ -37,14 +44,10 @@ chalkedit.addEventListener('click', function() {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
         chalkedit.style.opacity = "100%";
-        chalkicon.style.display = "none";
         chalkeditflag = false;
     } else {
         chalkmsg.readOnly = true;
         chalkedit.style.opacity = "30%";
-        if (chalkmsg.value == "") {
-            chalkicon.style.display = "inherit";
-        }
         chalkeditflag = true;
     }
 });
