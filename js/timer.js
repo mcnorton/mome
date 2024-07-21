@@ -50,9 +50,8 @@ let IntvID = null;
 let defaultTimerTitle = timerTitle.placeholder;
 let setTimerSound = DEFAULT_SOUND;
 let timerSound = new Audio(FINISH_SOUND_PATH + timesup[setTimerSound]);
-// const timerBGSound = document.getElementById("timer-bgsound");
 let timerBGSound = new Audio(BGM_SOUND);
-// const timesupSound = document.getElementById("timesup-sound");
+    timerBGSound.loop = true;
 let timesupSound = new Audio(FINISH_SOUND_PATH + timesup[setTimerSound]);
 let timerSoundTimeout = null;
 
