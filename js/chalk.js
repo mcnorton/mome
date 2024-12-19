@@ -2,6 +2,7 @@ const chalk = document.getElementById('chalk');
 const chalkbody = document.getElementById('chalk-body');
 const chalkmsg = document.getElementById('chalk-msg');
 const chalkedit = document.getElementById('chalk-edit');
+const chalkediticon = document.querySelector('#chalk-edit > ion-icon');
 const chalkrightmenu = document.getElementById('right');
 const chalkgreeting = document.getElementById('greeting');
 
@@ -43,10 +44,12 @@ chalkedit.addEventListener('click', function() {
     if (chalkeditflag == true) {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
+        chalkediticon.setAttribute("name", "document-text-outline")
         chalkedit.style.opacity = "100%";
         chalkeditflag = false;
     } else {
         chalkmsg.readOnly = true;
+        chalkediticon.setAttribute("name", "document-lock-outline")
         chalkedit.style.opacity = "30%";
         chalkeditflag = true;
     }
