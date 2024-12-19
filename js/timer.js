@@ -291,7 +291,7 @@ function drawTimer() {
 
     // background: conic-gradient(red 70%, white 30%);
     
-    // AntiClockwise
+    // CounterClockwise
     percent = (CntSec / (SetMtime * 60 * 10) * 100);
     timerGraph.style.background = `conic-gradient(red ${percent}%, white ${percent}%)`; 
     
