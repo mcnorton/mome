@@ -57,9 +57,10 @@ chalkedit.addEventListener('click', function() {
 
 chalkmsg.addEventListener('input', onChalkBoardResize);
 
+/* Guide icon
 chalkmsg.addEventListener('onfocus', function() {
     chalkicon.style.display = "none";
-});
+}); */
 
 function onChalkBoardResize() {
     chalkmsg.style.height = "auto";
