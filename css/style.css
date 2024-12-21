@@ -646,10 +646,10 @@ ion-icon {
     background-color: yellow;
     background: repeating-linear-gradient(
         -40deg,
-        black,
-        black 20px,
-        yellow 20px,
-        yellow 40px
+        green,
+        green 20px,
+        red 20px,
+        red 40px
     );
     animation: blink-blink 1s step-end infinite;
     /* margin: 0 auto; */
