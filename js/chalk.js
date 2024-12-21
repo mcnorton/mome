@@ -44,13 +44,15 @@ chalkedit.addEventListener('click', function() {
     if (chalkeditflag == true) {
         chalkmsg.readOnly = false;
         chalkmsg.focus();
-        chalkediticon.setAttribute("name", "document-text-outline")
+        chalkediticon.setAttribute("name", "lock-open")
         chalkedit.style.opacity = "100%";
+        chalkedit.style.color = "Lime";
         chalkeditflag = false;
     } else {
         chalkmsg.readOnly = true;
-        chalkediticon.setAttribute("name", "document-lock-outline")
+        chalkediticon.setAttribute("name", "lock-closed")
         chalkedit.style.opacity = "30%";
+        chalkedit.style.color = "white";
         chalkeditflag = true;
     }
 });
