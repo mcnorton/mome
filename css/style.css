@@ -320,11 +320,13 @@ ion-icon {
     font-size: 2vw;
     font-weight: bold;
     border-bottom: 1px solid #909090;
-    padding: 2.5vh 2vw 1vh 2vw;
+    padding: 1vw 0.5vw 1vw 3vw;
     list-style: none;
+    word-break: break-all;
+    word-wrap: break-word;
     text-indent: -3vw;
     text-decoration-color: #00000077;
-    text-decoration-thickness: 0.3rem;
+    text-decoration-thickness: 0.35rem;
 }
 
 .todo-list button {
