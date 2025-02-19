@@ -15,6 +15,7 @@ const images = [
     "geo.png",
     "santorini.jpg",
     "santorini2.jpg",
+    "gwanghwa.jpg",
     "dokdo.jpg"
 ]
 
