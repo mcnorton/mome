@@ -1,49 +1,20 @@
-// Autum 
-/*
 const images = [
     "",
     "spring.jpg",
-    "rose.jpg",
-    "ocean.jpg",
-    "business.jpg",
+    "snowdrop.jpg",
+    "buttercups.jpg",
     "rain.jpg",
-    "field.jpg",
-    "seoul.jpg",
-    "flower.jpg",
-    "geo.png"
-]; */
-
-// Winter
-/* const images = [
-    "",
-    "enjoy.jpg",
-    "candle.jpg",
-    "chess.jpg",
-    "cozypopcorn.jpg",
-    "czech.jpg",
-    "interior.jpg",
-    "snowflake.jpg",
-    "woodwall.jpg",
-    "books.jpg",
-    "fireplace.jpg"
-]; */
-
-// Spring
-const images = [
-    "",
-    "christmas.jpg",
-    "mini.png",
-    "xmashome.jpg",
-    "window.jpg",
-    "aicup.png",
     "leaves.jpg",
-    "autumn.jpg",
     "aibook.jpg",
-    "wflower.jpg",
+    "flower1.jpg",
+    "flower2.jpg",
+    "flower3.jpg",
     "tulips_y.jpg",
     "tulips_w.jpg",
     "art.jpg",
     "geo.png",
+    "santorini.jpg",
+    "santorini2.jpg",
     "dokdo.jpg"
 ]
 
