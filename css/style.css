@@ -977,6 +977,115 @@ ion-icon {
     right: 0px;
 }
 
+
+
+
+/******************************************************************/
+/* Simple Calendar                                                */
+/******************************************************************/
+.calendar {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    opacity: 95%;
+}
+.cal-head {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
+    height: 10vh;
+    width: 80vw;
+    align-items: center;
+    margin-top: 2vh;
+    margin-left: 10vw;
+}
+.cal-head div:nth-child(1) {
+    padding: 0 2vh;
+    text-align: center;
+    font-size: 6vh;
+    color: black;
+}
+.cal-head div:nth-child(3) {
+    text-align: center;
+}
+.cal-head div:nth-child(3) button {
+    color: black;
+    border: 0;
+    background-color: transparent;
+    font-size: 9vh;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.cal-head div:nth-child(2n) {
+    text-align: center;
+    font-size: 4vh;
+}
+.cal-head div:nth-child(5) {
+    position: absolute;
+    z-index: 10;
+    float: right;
+    right: 10px;
+    top: 10px;
+}
+.cal-head div:nth-child(5) button {
+    color: black;
+    border: 0;
+    background-color: transparent;
+    font-size: 4em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cal-head div:nth-child(2n) button {
+    color: silver;
+    border: 0;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cal-body {
+    display: grid;
+    grid-template-columns: repeat( 7, 1fr );
+    grid-template-rows: 1fr repeat( 6, 3fr );
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+.cal-label {
+    margin: 0.2vh;
+    padding: 0.2vh 1vh;
+    border-radius: 1%;
+    text-align: right;
+    font-size: 3vh;
+    color: black;
+    background-color: #ECECEC;
+}
+.cal-grid {
+    border: 1px solid black;
+    padding: 0.1em 0.3em;
+    margin: 0.2em;
+    border-radius: 0.3em;
+    font-size: 4vh;
+    text-align: right;
+    color: black;
+}
+
+
+
+
+
+
 /******************************************************************/
 /* Rotation icon                                                  */
 /******************************************************************/
