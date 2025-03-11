@@ -13,14 +13,9 @@
 * 저장된 목록은 사용자의 웹 브라우저에만 기록됩니다.
 * 간단한 도구들로 쓸모있게 활용하세요. (아날로그시계, 타이머, 경기점수판, 화이트보드)
 
-
-![momemo](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)
-
----
-
-<p align="center">
-   <a href="https://www.buymeacoffee.com/mcnorton"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=mcnorton&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-</p>
+| ![momemo](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)  |
+|:--:|
+| <a href="https://www.buymeacoffee.com/mcnorton"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=mcnorton&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a> |
 
 ---
 
