@@ -163,6 +163,7 @@ ion-icon {
     text-align: center;
     opacity: 50%;
     margin: 0;
+    cursor: pointer;
 }
 
 

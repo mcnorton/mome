@@ -17,6 +17,7 @@ let dtxt = 0;
 let calflag = false; // 아직 안그렸어요. False
 let calswlabel = 0;
 
+document.getElementById("calen").addEventListener("click", onClickCalOpen);
 calpre.addEventListener("click", function() { dispCalendar(-1); });
 calfwd.addEventListener("click", function() { dispCalendar(1); });
 calday.addEventListener("click", function() { dispCalendar(0); });
