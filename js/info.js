@@ -9,7 +9,7 @@ readme.addEventListener("click", function() {
 });
 
 lovely.addEventListener("click", function() {
-    lovelysong.play();
+    window.open("https://buymeacoffee.com/mcnorton", "mome_buymeacoffee");
 });
 
 lovely.addEventListener("blur", function() {
