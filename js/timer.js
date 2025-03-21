@@ -40,6 +40,17 @@ const timesup = [
   "attention.mp3"
 ];
 
+const timercolor = [
+  "darkslateblue",
+  "royalblue",
+  "olivedrab",
+  "orchid",
+  "lightslategray",
+  "darkred",
+  "yellowgreen",
+  "darkorange"
+];
+
 let savedTime = DEFAULT_TIME;
 let finishTime = Date.now(); // finish time
 
@@ -54,6 +65,7 @@ let timerBGSound = new Audio(BGM_SOUND);
     timerBGSound.loop = true;
 let timesupSound = new Audio(FINISH_SOUND_PATH + timesup[setTimerSound]);
 let timerSoundTimeout = null;
+let timerBGColor = "";
 
 document.getElementById("timer-open").addEventListener("click", onClickTimerOpen);
 document.querySelector("#timer-timeup-dialog > button").addEventListener("click", onClickTimerReset);
@@ -153,6 +165,9 @@ function onClickTimerOpen() {
   timerModal.style.display = "inherit";
   document.getElementById("right").style.visibility = 'hidden'; // 반투명 모드에서 할일 목록 감추기
   document.getElementById("greeting").style.visibility = 'hidden'; // 인사말, 이름 감추기
+
+  timerBGColor = timercolor[Math.floor(Math.random()*(timercolor.length))];
+
   getSavedTimeData();
   onClickTimerReset();
 }
@@ -187,7 +202,9 @@ function onClickTimerReset() {
 
   timesupSoundOff();
   timerBGMoff();
+
   timesupPopup.style.visibility = "hidden";
+  timerBGColor = timercolor[Math.floor(Math.random()*(timercolor.length))];
 
   timerControlOn();
   setLocalTimer(SetMtime); // save Timer data
@@ -293,12 +310,12 @@ function drawTimer() {
     
     // CounterClockwise
     percent = (CntSec / (SetMtime * 60 * 10) * 100);
-    timerGraph.style.background = `conic-gradient(red ${percent}%, white ${percent}%)`; 
+    timerGraph.style.background = `conic-gradient(${timerBGColor} ${percent}%, white ${percent}%)`; 
     
 
     // Clockwise
     /* percent = 100 - (CntSec / (SetMtime * 60 * 10) * 100);
-    timerGraph.style.background = `conic-gradient(white ${percent}%, #bb0000 ${percent}%)`;
+    timerGraph.style.background = `conic-gradient(white ${percent}%, ${timerBGColor} ${percent}%)`;
     */
 
     if (CntSec <= 0) { 
