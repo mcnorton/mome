@@ -15,7 +15,8 @@
 
 | ![momemo](https://github.com/mcnorton/mome/assets/4551495/660bcb5c-fed8-451e-94e6-2965722fed24)  |
 |:--:|
-| <a href="https://www.buymeacoffee.com/mcnorton"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=mcnorton&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a> |
+| <a href="https://qr.kakaopay.com/Ej7rXgFvM73a04911"><img src="https://github.com/user-attachments/assets/168f7d6e-4bcb-4978-be2a-ed598bd63e31" width="250" height="308"></a> |
+
 
 ---
 
