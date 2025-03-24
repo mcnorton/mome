@@ -111,6 +111,12 @@
 * 설치완료 후, 새 탭을 열고, [Enable] 체크
 * [URL or Local file path]에 https://mcnorton.github.io/mome/ 입력하고 [Save]
 
+---
+
+| Coffeeware |
+|:---:|
+| <a href="https://qr.kakaopay.com/Ej7rXgFvM73a04911">![kakao_buymeacoffee](https://github.com/user-attachments/assets/7dee1285-0f93-4992-bb91-79ae7be0c048)
+</a>A software engineer is a device for turning coffee into software |
 
 ---
 
