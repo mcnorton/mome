@@ -17,7 +17,7 @@
 |:--:|
 | Coffeeware |
 | <a href="https://qr.kakaopay.com/Ej7rXgFvM73a04911">![kakao_buymeacoffee](https://github.com/user-attachments/assets/7dee1285-0f93-4992-bb91-79ae7be0c048)
-</a>A software engineer is a device for turning coffee into software |
+</a>A software engineer is a device for turning coffee into software - mcnorton|
 
 
 ---
