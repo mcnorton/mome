@@ -3,7 +3,7 @@
   "short_name": "MoMemo",
   "description": "큰 시계와 체크리스트. 하루 일정과 할일, 약속, 순간(Moment)의 생각을 메모(Memo)하세요.",
   "icons": [{
-    "src": "icons/icon-128x128.png",
+      "src": "icons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     }, {
