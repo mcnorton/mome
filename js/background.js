@@ -1,20 +1,17 @@
 const images = [
     "",
+    "bloom.jpg",
     "spring.jpg",
-    "snowdrop.jpg",
-    "buttercups.jpg",
-    "rain.jpg",
-    "leaves.jpg",
     "aibook.jpg",
+    "rain.jpg",
     "flower1.jpg",
     "flower2.jpg",
     "flower3.jpg",
     "tulips_y.jpg",
     "tulips_w.jpg",
+    "leaves.jpg",
     "art.jpg",
     "geo.png",
-    "santorini.jpg",
-    "santorini2.jpg",
     "gwanghwa.jpg",
     "dokdo.jpg"
 ]
