@@ -646,10 +646,10 @@ ion-icon {
     background-color: yellow;
     background: repeating-linear-gradient(
         -40deg,
-        green,
-        green 20px,
-        red 20px,
-        red 40px
+        #EC7FA9,
+        #EC7FA9 20px,
+        #FFB8E0 20px,
+        #FFB8E0 40px
     );
     animation: blink-blink 1s step-end infinite;
     /* margin: 0 auto; */
@@ -661,7 +661,7 @@ ion-icon {
 .timer-timeup-dialog button {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #BE5985;
     color: white;
     padding: 20px;
     border: 0;
